@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AEB84334D2000FE99CC050C6 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ECC9ACFB01249F8227AB52D9 /* libPods.a */; };
 		F899405B1B0DE015005C2765 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F899405A1B0DE015005C2765 /* main.m */; };
 		F899405E1B0DE015005C2765 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F899405D1B0DE015005C2765 /* AppDelegate.m */; };
 		F89940611B0DE015005C2765 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F89940601B0DE015005C2765 /* ViewController.m */; };
@@ -14,6 +15,35 @@
 		F89940661B0DE015005C2765 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F89940651B0DE015005C2765 /* Images.xcassets */; };
 		F89940691B0DE015005C2765 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = F89940671B0DE015005C2765 /* LaunchScreen.xib */; };
 		F89940751B0DE015005C2765 /* FFNetworkingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F89940741B0DE015005C2765 /* FFNetworkingTests.m */; };
+		F89940C51B0DE21A005C2765 /* FFDeviceInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = F89940831B0DE21A005C2765 /* FFDeviceInfo.m */; };
+		F89940C61B0DE21A005C2765 /* FFKeychain.m in Sources */ = {isa = PBXBuildFile; fileRef = F89940851B0DE21A005C2765 /* FFKeychain.m */; };
+		F89940C71B0DE21A005C2765 /* FFNetCommonParamsGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = F89940871B0DE21A005C2765 /* FFNetCommonParamsGenerator.m */; };
+		F89940C81B0DE21A005C2765 /* FFUDIDGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = F89940891B0DE21A005C2765 /* FFUDIDGenerator.m */; };
+		F89940C91B0DE21A005C2765 /* NSArray+FFNetMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = F899408C1B0DE21A005C2765 /* NSArray+FFNetMethod.m */; };
+		F89940CA1B0DE21A005C2765 /* NSDictionary+FFNetMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = F899408E1B0DE21A005C2765 /* NSDictionary+FFNetMethod.m */; };
+		F89940CB1B0DE21A005C2765 /* NSMutableString+FFNetMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = F89940901B0DE21A005C2765 /* NSMutableString+FFNetMethod.m */; };
+		F89940CC1B0DE21A005C2765 /* NSObject+FFNetMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = F89940921B0DE21A005C2765 /* NSObject+FFNetMethod.m */; };
+		F89940CD1B0DE21A005C2765 /* NSString+MD5Addition.m in Sources */ = {isa = PBXBuildFile; fileRef = F89940941B0DE21A005C2765 /* NSString+MD5Addition.m */; };
+		F89940CE1B0DE21A005C2765 /* NSString+FFNetMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = F89940961B0DE21A005C2765 /* NSString+FFNetMethod.m */; };
+		F89940CF1B0DE21A005C2765 /* NSURLRequest+FFNetMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = F89940981B0DE21A005C2765 /* NSURLRequest+FFNetMethod.m */; };
+		F89940D01B0DE21A005C2765 /* UIDevice+FFIdentifierAddition.m in Sources */ = {isa = PBXBuildFile; fileRef = F899409A1B0DE21A005C2765 /* UIDevice+FFIdentifierAddition.m */; };
+		F89940D11B0DE21A005C2765 /* FFRequestResponse+FFNetMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = F899409C1B0DE21A005C2765 /* FFRequestResponse+FFNetMethod.m */; };
+		F89940D21B0DE21A005C2765 /* FFAppContext.m in Sources */ = {isa = PBXBuildFile; fileRef = F899409F1B0DE21A005C2765 /* FFAppContext.m */; };
+		F89940D31B0DE21A005C2765 /* FFNetDebug.m in Sources */ = {isa = PBXBuildFile; fileRef = F89940A21B0DE21A005C2765 /* FFNetDebug.m */; };
+		F89940D41B0DE21A005C2765 /* FFRequestResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = F89940A51B0DE21A005C2765 /* FFRequestResponse.m */; };
+		F89940D51B0DE21A005C2765 /* FFSignatureGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = F89940A81B0DE21A005C2765 /* FFSignatureGenerator.m */; };
+		F89940D61B0DE21A005C2765 /* FFMusicForBaidu.m in Sources */ = {isa = PBXBuildFile; fileRef = F89940AB1B0DE21A005C2765 /* FFMusicForBaidu.m */; };
+		F89940D71B0DE21A005C2765 /* FFMusicForBaidu2.m in Sources */ = {isa = PBXBuildFile; fileRef = F89940AD1B0DE21A005C2765 /* FFMusicForBaidu2.m */; };
+		F89940D81B0DE21A005C2765 /* FFMusicForWeibo.m in Sources */ = {isa = PBXBuildFile; fileRef = F89940AF1B0DE21A005C2765 /* FFMusicForWeibo.m */; };
+		F89940D91B0DE21A005C2765 /* FFApiManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F89940B11B0DE21A005C2765 /* FFApiManager.m */; };
+		F89940DA1B0DE21A005C2765 /* FFMusicForBaiduGet.m in Sources */ = {isa = PBXBuildFile; fileRef = F89940B51B0DE21A005C2765 /* FFMusicForBaiduGet.m */; };
+		F89940DB1B0DE21A005C2765 /* FFMusicForBroker.m in Sources */ = {isa = PBXBuildFile; fileRef = F89940B71B0DE21A005C2765 /* FFMusicForBroker.m */; };
+		F89940DC1B0DE21A005C2765 /* FFMusicForBrokerPost.m in Sources */ = {isa = PBXBuildFile; fileRef = F89940B91B0DE21A005C2765 /* FFMusicForBrokerPost.m */; };
+		F89940DD1B0DE21A005C2765 /* FFMusicForBrokerRest.m in Sources */ = {isa = PBXBuildFile; fileRef = F89940BB1B0DE21A005C2765 /* FFMusicForBrokerRest.m */; };
+		F89940DE1B0DE21A005C2765 /* FFNetService.m in Sources */ = {isa = PBXBuildFile; fileRef = F89940BD1B0DE21A005C2765 /* FFNetService.m */; };
+		F89940DF1B0DE21A005C2765 /* FFNetServiceFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = F89940BF1B0DE21A005C2765 /* FFNetServiceFactory.m */; };
+		F89940E01B0DE21A005C2765 /* FFRequestGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = F89940C21B0DE21A005C2765 /* FFRequestGenerator.m */; };
+		F89940E11B0DE21A005C2765 /* FFRequestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F89940C41B0DE21A005C2765 /* FFRequestManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,6 +57,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D7B7A3324AB4AF4B638EAD80 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		ECC9ACFB01249F8227AB52D9 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		F34A822CEFD5087F203C0DFB /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		F89940551B0DE015005C2765 /* FFNetworking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FFNetworking.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F89940591B0DE015005C2765 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F899405A1B0DE015005C2765 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -40,6 +73,65 @@
 		F899406E1B0DE015005C2765 /* FFNetworkingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FFNetworkingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F89940731B0DE015005C2765 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F89940741B0DE015005C2765 /* FFNetworkingTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FFNetworkingTests.m; sourceTree = "<group>"; };
+		F89940821B0DE21A005C2765 /* FFDeviceInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFDeviceInfo.h; sourceTree = "<group>"; };
+		F89940831B0DE21A005C2765 /* FFDeviceInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFDeviceInfo.m; sourceTree = "<group>"; };
+		F89940841B0DE21A005C2765 /* FFKeychain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFKeychain.h; sourceTree = "<group>"; };
+		F89940851B0DE21A005C2765 /* FFKeychain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFKeychain.m; sourceTree = "<group>"; };
+		F89940861B0DE21A005C2765 /* FFNetCommonParamsGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFNetCommonParamsGenerator.h; sourceTree = "<group>"; };
+		F89940871B0DE21A005C2765 /* FFNetCommonParamsGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFNetCommonParamsGenerator.m; sourceTree = "<group>"; };
+		F89940881B0DE21A005C2765 /* FFUDIDGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFUDIDGenerator.h; sourceTree = "<group>"; };
+		F89940891B0DE21A005C2765 /* FFUDIDGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFUDIDGenerator.m; sourceTree = "<group>"; };
+		F899408B1B0DE21A005C2765 /* NSArray+FFNetMethod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+FFNetMethod.h"; sourceTree = "<group>"; };
+		F899408C1B0DE21A005C2765 /* NSArray+FFNetMethod.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+FFNetMethod.m"; sourceTree = "<group>"; };
+		F899408D1B0DE21A005C2765 /* NSDictionary+FFNetMethod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+FFNetMethod.h"; sourceTree = "<group>"; };
+		F899408E1B0DE21A005C2765 /* NSDictionary+FFNetMethod.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+FFNetMethod.m"; sourceTree = "<group>"; };
+		F899408F1B0DE21A005C2765 /* NSMutableString+FFNetMethod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableString+FFNetMethod.h"; sourceTree = "<group>"; };
+		F89940901B0DE21A005C2765 /* NSMutableString+FFNetMethod.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableString+FFNetMethod.m"; sourceTree = "<group>"; };
+		F89940911B0DE21A005C2765 /* NSObject+FFNetMethod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+FFNetMethod.h"; sourceTree = "<group>"; };
+		F89940921B0DE21A005C2765 /* NSObject+FFNetMethod.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+FFNetMethod.m"; sourceTree = "<group>"; };
+		F89940931B0DE21A005C2765 /* NSString+MD5Addition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+MD5Addition.h"; sourceTree = "<group>"; };
+		F89940941B0DE21A005C2765 /* NSString+MD5Addition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+MD5Addition.m"; sourceTree = "<group>"; };
+		F89940951B0DE21A005C2765 /* NSString+FFNetMethod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+FFNetMethod.h"; sourceTree = "<group>"; };
+		F89940961B0DE21A005C2765 /* NSString+FFNetMethod.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+FFNetMethod.m"; sourceTree = "<group>"; };
+		F89940971B0DE21A005C2765 /* NSURLRequest+FFNetMethod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURLRequest+FFNetMethod.h"; sourceTree = "<group>"; };
+		F89940981B0DE21A005C2765 /* NSURLRequest+FFNetMethod.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURLRequest+FFNetMethod.m"; sourceTree = "<group>"; };
+		F89940991B0DE21A005C2765 /* UIDevice+FFIdentifierAddition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIDevice+FFIdentifierAddition.h"; sourceTree = "<group>"; };
+		F899409A1B0DE21A005C2765 /* UIDevice+FFIdentifierAddition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+FFIdentifierAddition.m"; sourceTree = "<group>"; };
+		F899409B1B0DE21A005C2765 /* FFRequestResponse+FFNetMethod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FFRequestResponse+FFNetMethod.h"; sourceTree = "<group>"; };
+		F899409C1B0DE21A005C2765 /* FFRequestResponse+FFNetMethod.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "FFRequestResponse+FFNetMethod.m"; sourceTree = "<group>"; };
+		F899409E1B0DE21A005C2765 /* FFAppContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFAppContext.h; sourceTree = "<group>"; };
+		F899409F1B0DE21A005C2765 /* FFAppContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFAppContext.m; sourceTree = "<group>"; };
+		F89940A11B0DE21A005C2765 /* FFNetDebug.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFNetDebug.h; sourceTree = "<group>"; };
+		F89940A21B0DE21A005C2765 /* FFNetDebug.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFNetDebug.m; sourceTree = "<group>"; };
+		F89940A41B0DE21A005C2765 /* FFRequestResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFRequestResponse.h; sourceTree = "<group>"; };
+		F89940A51B0DE21A005C2765 /* FFRequestResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFRequestResponse.m; sourceTree = "<group>"; };
+		F89940A71B0DE21A005C2765 /* FFSignatureGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFSignatureGenerator.h; sourceTree = "<group>"; };
+		F89940A81B0DE21A005C2765 /* FFSignatureGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFSignatureGenerator.m; sourceTree = "<group>"; };
+		F89940AA1B0DE21A005C2765 /* FFMusicForBaidu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFMusicForBaidu.h; sourceTree = "<group>"; };
+		F89940AB1B0DE21A005C2765 /* FFMusicForBaidu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFMusicForBaidu.m; sourceTree = "<group>"; };
+		F89940AC1B0DE21A005C2765 /* FFMusicForBaidu2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFMusicForBaidu2.h; sourceTree = "<group>"; };
+		F89940AD1B0DE21A005C2765 /* FFMusicForBaidu2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFMusicForBaidu2.m; sourceTree = "<group>"; };
+		F89940AE1B0DE21A005C2765 /* FFMusicForWeibo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFMusicForWeibo.h; sourceTree = "<group>"; };
+		F89940AF1B0DE21A005C2765 /* FFMusicForWeibo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFMusicForWeibo.m; sourceTree = "<group>"; };
+		F89940B01B0DE21A005C2765 /* FFApiManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFApiManager.h; sourceTree = "<group>"; };
+		F89940B11B0DE21A005C2765 /* FFApiManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFApiManager.m; sourceTree = "<group>"; };
+		F89940B41B0DE21A005C2765 /* FFMusicForBaiduGet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFMusicForBaiduGet.h; sourceTree = "<group>"; };
+		F89940B51B0DE21A005C2765 /* FFMusicForBaiduGet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFMusicForBaiduGet.m; sourceTree = "<group>"; };
+		F89940B61B0DE21A005C2765 /* FFMusicForBroker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFMusicForBroker.h; sourceTree = "<group>"; };
+		F89940B71B0DE21A005C2765 /* FFMusicForBroker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFMusicForBroker.m; sourceTree = "<group>"; };
+		F89940B81B0DE21A005C2765 /* FFMusicForBrokerPost.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFMusicForBrokerPost.h; sourceTree = "<group>"; };
+		F89940B91B0DE21A005C2765 /* FFMusicForBrokerPost.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFMusicForBrokerPost.m; sourceTree = "<group>"; };
+		F89940BA1B0DE21A005C2765 /* FFMusicForBrokerRest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFMusicForBrokerRest.h; sourceTree = "<group>"; };
+		F89940BB1B0DE21A005C2765 /* FFMusicForBrokerRest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFMusicForBrokerRest.m; sourceTree = "<group>"; };
+		F89940BC1B0DE21A005C2765 /* FFNetService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFNetService.h; sourceTree = "<group>"; };
+		F89940BD1B0DE21A005C2765 /* FFNetService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFNetService.m; sourceTree = "<group>"; };
+		F89940BE1B0DE21A005C2765 /* FFNetServiceFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFNetServiceFactory.h; sourceTree = "<group>"; };
+		F89940BF1B0DE21A005C2765 /* FFNetServiceFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFNetServiceFactory.m; sourceTree = "<group>"; };
+		F89940C01B0DE21A005C2765 /* FFNetWorkingHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFNetWorkingHeader.h; sourceTree = "<group>"; };
+		F89940C11B0DE21A005C2765 /* FFRequestGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFRequestGenerator.h; sourceTree = "<group>"; };
+		F89940C21B0DE21A005C2765 /* FFRequestGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFRequestGenerator.m; sourceTree = "<group>"; };
+		F89940C31B0DE21A005C2765 /* FFRequestManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFRequestManager.h; sourceTree = "<group>"; };
+		F89940C41B0DE21A005C2765 /* FFRequestManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFRequestManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +139,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AEB84334D2000FE99CC050C6 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -60,12 +153,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7BB20864FB564DABA587BEF4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F34A822CEFD5087F203C0DFB /* Pods.debug.xcconfig */,
+				D7B7A3324AB4AF4B638EAD80 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		7EAA004E3E40CE5410EFC3D1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				ECC9ACFB01249F8227AB52D9 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		F899404C1B0DE015005C2765 = {
 			isa = PBXGroup;
 			children = (
 				F89940571B0DE015005C2765 /* FFNetworking */,
 				F89940711B0DE015005C2765 /* FFNetworkingTests */,
 				F89940561B0DE015005C2765 /* Products */,
+				7BB20864FB564DABA587BEF4 /* Pods */,
+				7EAA004E3E40CE5410EFC3D1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -81,6 +193,7 @@
 		F89940571B0DE015005C2765 /* FFNetworking */ = {
 			isa = PBXGroup;
 			children = (
+				F89940801B0DE21A005C2765 /* FFNetworking */,
 				F899405C1B0DE015005C2765 /* AppDelegate.h */,
 				F899405D1B0DE015005C2765 /* AppDelegate.m */,
 				F899405F1B0DE015005C2765 /* ViewController.h */,
@@ -119,6 +232,144 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		F89940801B0DE21A005C2765 /* FFNetworking */ = {
+			isa = PBXGroup;
+			children = (
+				F89940811B0DE21A005C2765 /* Assist */,
+				F899408A1B0DE21A005C2765 /* Category */,
+				F899409D1B0DE21A005C2765 /* Components */,
+				F89940A01B0DE21A005C2765 /* Debug */,
+				F89940A31B0DE21A005C2765 /* FFResponse */,
+				F89940A61B0DE21A005C2765 /* FFSignatureGenerator */,
+				F89940A91B0DE21A005C2765 /* ServiceConfig */,
+				F89940B01B0DE21A005C2765 /* FFApiManager.h */,
+				F89940B11B0DE21A005C2765 /* FFApiManager.m */,
+				F89940B21B0DE21A005C2765 /* XZNetService */,
+				F89940C01B0DE21A005C2765 /* FFNetWorkingHeader.h */,
+				F89940C11B0DE21A005C2765 /* FFRequestGenerator.h */,
+				F89940C21B0DE21A005C2765 /* FFRequestGenerator.m */,
+				F89940C31B0DE21A005C2765 /* FFRequestManager.h */,
+				F89940C41B0DE21A005C2765 /* FFRequestManager.m */,
+			);
+			path = FFNetworking;
+			sourceTree = "<group>";
+		};
+		F89940811B0DE21A005C2765 /* Assist */ = {
+			isa = PBXGroup;
+			children = (
+				F89940821B0DE21A005C2765 /* FFDeviceInfo.h */,
+				F89940831B0DE21A005C2765 /* FFDeviceInfo.m */,
+				F89940841B0DE21A005C2765 /* FFKeychain.h */,
+				F89940851B0DE21A005C2765 /* FFKeychain.m */,
+				F89940861B0DE21A005C2765 /* FFNetCommonParamsGenerator.h */,
+				F89940871B0DE21A005C2765 /* FFNetCommonParamsGenerator.m */,
+				F89940881B0DE21A005C2765 /* FFUDIDGenerator.h */,
+				F89940891B0DE21A005C2765 /* FFUDIDGenerator.m */,
+			);
+			path = Assist;
+			sourceTree = "<group>";
+		};
+		F899408A1B0DE21A005C2765 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				F899408B1B0DE21A005C2765 /* NSArray+FFNetMethod.h */,
+				F899408C1B0DE21A005C2765 /* NSArray+FFNetMethod.m */,
+				F899408D1B0DE21A005C2765 /* NSDictionary+FFNetMethod.h */,
+				F899408E1B0DE21A005C2765 /* NSDictionary+FFNetMethod.m */,
+				F899408F1B0DE21A005C2765 /* NSMutableString+FFNetMethod.h */,
+				F89940901B0DE21A005C2765 /* NSMutableString+FFNetMethod.m */,
+				F89940911B0DE21A005C2765 /* NSObject+FFNetMethod.h */,
+				F89940921B0DE21A005C2765 /* NSObject+FFNetMethod.m */,
+				F89940931B0DE21A005C2765 /* NSString+MD5Addition.h */,
+				F89940941B0DE21A005C2765 /* NSString+MD5Addition.m */,
+				F89940951B0DE21A005C2765 /* NSString+FFNetMethod.h */,
+				F89940961B0DE21A005C2765 /* NSString+FFNetMethod.m */,
+				F89940971B0DE21A005C2765 /* NSURLRequest+FFNetMethod.h */,
+				F89940981B0DE21A005C2765 /* NSURLRequest+FFNetMethod.m */,
+				F89940991B0DE21A005C2765 /* UIDevice+FFIdentifierAddition.h */,
+				F899409A1B0DE21A005C2765 /* UIDevice+FFIdentifierAddition.m */,
+				F899409B1B0DE21A005C2765 /* FFRequestResponse+FFNetMethod.h */,
+				F899409C1B0DE21A005C2765 /* FFRequestResponse+FFNetMethod.m */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		F899409D1B0DE21A005C2765 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				F899409E1B0DE21A005C2765 /* FFAppContext.h */,
+				F899409F1B0DE21A005C2765 /* FFAppContext.m */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		F89940A01B0DE21A005C2765 /* Debug */ = {
+			isa = PBXGroup;
+			children = (
+				F89940A11B0DE21A005C2765 /* FFNetDebug.h */,
+				F89940A21B0DE21A005C2765 /* FFNetDebug.m */,
+			);
+			path = Debug;
+			sourceTree = "<group>";
+		};
+		F89940A31B0DE21A005C2765 /* FFResponse */ = {
+			isa = PBXGroup;
+			children = (
+				F89940A41B0DE21A005C2765 /* FFRequestResponse.h */,
+				F89940A51B0DE21A005C2765 /* FFRequestResponse.m */,
+			);
+			path = FFResponse;
+			sourceTree = "<group>";
+		};
+		F89940A61B0DE21A005C2765 /* FFSignatureGenerator */ = {
+			isa = PBXGroup;
+			children = (
+				F89940A71B0DE21A005C2765 /* FFSignatureGenerator.h */,
+				F89940A81B0DE21A005C2765 /* FFSignatureGenerator.m */,
+			);
+			path = FFSignatureGenerator;
+			sourceTree = "<group>";
+		};
+		F89940A91B0DE21A005C2765 /* ServiceConfig */ = {
+			isa = PBXGroup;
+			children = (
+				F89940AA1B0DE21A005C2765 /* FFMusicForBaidu.h */,
+				F89940AB1B0DE21A005C2765 /* FFMusicForBaidu.m */,
+				F89940AC1B0DE21A005C2765 /* FFMusicForBaidu2.h */,
+				F89940AD1B0DE21A005C2765 /* FFMusicForBaidu2.m */,
+				F89940AE1B0DE21A005C2765 /* FFMusicForWeibo.h */,
+				F89940AF1B0DE21A005C2765 /* FFMusicForWeibo.m */,
+			);
+			path = ServiceConfig;
+			sourceTree = "<group>";
+		};
+		F89940B21B0DE21A005C2765 /* XZNetService */ = {
+			isa = PBXGroup;
+			children = (
+				F89940B31B0DE21A005C2765 /* ServiceConfig */,
+				F89940BC1B0DE21A005C2765 /* FFNetService.h */,
+				F89940BD1B0DE21A005C2765 /* FFNetService.m */,
+				F89940BE1B0DE21A005C2765 /* FFNetServiceFactory.h */,
+				F89940BF1B0DE21A005C2765 /* FFNetServiceFactory.m */,
+			);
+			path = XZNetService;
+			sourceTree = "<group>";
+		};
+		F89940B31B0DE21A005C2765 /* ServiceConfig */ = {
+			isa = PBXGroup;
+			children = (
+				F89940B41B0DE21A005C2765 /* FFMusicForBaiduGet.h */,
+				F89940B51B0DE21A005C2765 /* FFMusicForBaiduGet.m */,
+				F89940B61B0DE21A005C2765 /* FFMusicForBroker.h */,
+				F89940B71B0DE21A005C2765 /* FFMusicForBroker.m */,
+				F89940B81B0DE21A005C2765 /* FFMusicForBrokerPost.h */,
+				F89940B91B0DE21A005C2765 /* FFMusicForBrokerPost.m */,
+				F89940BA1B0DE21A005C2765 /* FFMusicForBrokerRest.h */,
+				F89940BB1B0DE21A005C2765 /* FFMusicForBrokerRest.m */,
+			);
+			path = ServiceConfig;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -126,9 +377,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F89940781B0DE015005C2765 /* Build configuration list for PBXNativeTarget "FFNetworking" */;
 			buildPhases = (
+				C37CE01B21374DD1CA6E7B35 /* Check Pods Manifest.lock */,
 				F89940511B0DE015005C2765 /* Sources */,
 				F89940521B0DE015005C2765 /* Frameworks */,
 				F89940531B0DE015005C2765 /* Resources */,
+				E18D1EFDC5C20A867293C0AC /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -214,14 +467,76 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		C37CE01B21374DD1CA6E7B35 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		E18D1EFDC5C20A867293C0AC /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		F89940511B0DE015005C2765 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F89940DB1B0DE21A005C2765 /* FFMusicForBroker.m in Sources */,
+				F89940D91B0DE21A005C2765 /* FFApiManager.m in Sources */,
+				F89940CC1B0DE21A005C2765 /* NSObject+FFNetMethod.m in Sources */,
+				F89940E11B0DE21A005C2765 /* FFRequestManager.m in Sources */,
 				F89940611B0DE015005C2765 /* ViewController.m in Sources */,
+				F89940CB1B0DE21A005C2765 /* NSMutableString+FFNetMethod.m in Sources */,
+				F89940D01B0DE21A005C2765 /* UIDevice+FFIdentifierAddition.m in Sources */,
+				F89940D51B0DE21A005C2765 /* FFSignatureGenerator.m in Sources */,
+				F89940CE1B0DE21A005C2765 /* NSString+FFNetMethod.m in Sources */,
+				F89940DF1B0DE21A005C2765 /* FFNetServiceFactory.m in Sources */,
+				F89940D41B0DE21A005C2765 /* FFRequestResponse.m in Sources */,
+				F89940C81B0DE21A005C2765 /* FFUDIDGenerator.m in Sources */,
+				F89940D61B0DE21A005C2765 /* FFMusicForBaidu.m in Sources */,
 				F899405E1B0DE015005C2765 /* AppDelegate.m in Sources */,
+				F89940C61B0DE21A005C2765 /* FFKeychain.m in Sources */,
+				F89940CA1B0DE21A005C2765 /* NSDictionary+FFNetMethod.m in Sources */,
+				F89940D11B0DE21A005C2765 /* FFRequestResponse+FFNetMethod.m in Sources */,
 				F899405B1B0DE015005C2765 /* main.m in Sources */,
+				F89940DA1B0DE21A005C2765 /* FFMusicForBaiduGet.m in Sources */,
+				F89940DE1B0DE21A005C2765 /* FFNetService.m in Sources */,
+				F89940D31B0DE21A005C2765 /* FFNetDebug.m in Sources */,
+				F89940DD1B0DE21A005C2765 /* FFMusicForBrokerRest.m in Sources */,
+				F89940D21B0DE21A005C2765 /* FFAppContext.m in Sources */,
+				F89940D71B0DE21A005C2765 /* FFMusicForBaidu2.m in Sources */,
+				F89940DC1B0DE21A005C2765 /* FFMusicForBrokerPost.m in Sources */,
+				F89940CF1B0DE21A005C2765 /* NSURLRequest+FFNetMethod.m in Sources */,
+				F89940C91B0DE21A005C2765 /* NSArray+FFNetMethod.m in Sources */,
+				F89940C71B0DE21A005C2765 /* FFNetCommonParamsGenerator.m in Sources */,
+				F89940CD1B0DE21A005C2765 /* NSString+MD5Addition.m in Sources */,
+				F89940E01B0DE21A005C2765 /* FFRequestGenerator.m in Sources */,
+				F89940D81B0DE21A005C2765 /* FFMusicForWeibo.m in Sources */,
+				F89940C51B0DE21A005C2765 /* FFDeviceInfo.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -347,6 +662,7 @@
 		};
 		F89940791B0DE015005C2765 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F34A822CEFD5087F203C0DFB /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = FFNetworking/Info.plist;
@@ -357,6 +673,7 @@
 		};
 		F899407A1B0DE015005C2765 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D7B7A3324AB4AF4B638EAD80 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = FFNetworking/Info.plist;
@@ -418,6 +735,7 @@
 				F899407A1B0DE015005C2765 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F899407B1B0DE015005C2765 /* Build configuration list for PBXNativeTarget "FFNetworkingTests" */ = {
 			isa = XCConfigurationList;
@@ -426,6 +744,7 @@
 				F899407D1B0DE015005C2765 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
