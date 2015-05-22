@@ -32,18 +32,12 @@
 		F89940D31B0DE21A005C2765 /* FFNetDebug.m in Sources */ = {isa = PBXBuildFile; fileRef = F89940A21B0DE21A005C2765 /* FFNetDebug.m */; };
 		F89940D41B0DE21A005C2765 /* FFRequestResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = F89940A51B0DE21A005C2765 /* FFRequestResponse.m */; };
 		F89940D51B0DE21A005C2765 /* FFSignatureGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = F89940A81B0DE21A005C2765 /* FFSignatureGenerator.m */; };
-		F89940D61B0DE21A005C2765 /* FFMusicForBaidu.m in Sources */ = {isa = PBXBuildFile; fileRef = F89940AB1B0DE21A005C2765 /* FFMusicForBaidu.m */; };
-		F89940D71B0DE21A005C2765 /* FFMusicForBaidu2.m in Sources */ = {isa = PBXBuildFile; fileRef = F89940AD1B0DE21A005C2765 /* FFMusicForBaidu2.m */; };
-		F89940D81B0DE21A005C2765 /* FFMusicForWeibo.m in Sources */ = {isa = PBXBuildFile; fileRef = F89940AF1B0DE21A005C2765 /* FFMusicForWeibo.m */; };
 		F89940D91B0DE21A005C2765 /* FFApiManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F89940B11B0DE21A005C2765 /* FFApiManager.m */; };
-		F89940DA1B0DE21A005C2765 /* FFMusicForBaiduGet.m in Sources */ = {isa = PBXBuildFile; fileRef = F89940B51B0DE21A005C2765 /* FFMusicForBaiduGet.m */; };
-		F89940DB1B0DE21A005C2765 /* FFMusicForBroker.m in Sources */ = {isa = PBXBuildFile; fileRef = F89940B71B0DE21A005C2765 /* FFMusicForBroker.m */; };
-		F89940DC1B0DE21A005C2765 /* FFMusicForBrokerPost.m in Sources */ = {isa = PBXBuildFile; fileRef = F89940B91B0DE21A005C2765 /* FFMusicForBrokerPost.m */; };
-		F89940DD1B0DE21A005C2765 /* FFMusicForBrokerRest.m in Sources */ = {isa = PBXBuildFile; fileRef = F89940BB1B0DE21A005C2765 /* FFMusicForBrokerRest.m */; };
 		F89940DE1B0DE21A005C2765 /* FFNetService.m in Sources */ = {isa = PBXBuildFile; fileRef = F89940BD1B0DE21A005C2765 /* FFNetService.m */; };
 		F89940DF1B0DE21A005C2765 /* FFNetServiceFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = F89940BF1B0DE21A005C2765 /* FFNetServiceFactory.m */; };
 		F89940E01B0DE21A005C2765 /* FFRequestGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = F89940C21B0DE21A005C2765 /* FFRequestGenerator.m */; };
 		F89940E11B0DE21A005C2765 /* FFRequestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F89940C41B0DE21A005C2765 /* FFRequestManager.m */; };
+		F8CC37071B0F2ED6009DA9EE /* FFHomeFreshFresh.m in Sources */ = {isa = PBXBuildFile; fileRef = F8CC37061B0F2ED6009DA9EE /* FFHomeFreshFresh.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -107,22 +101,8 @@
 		F89940A51B0DE21A005C2765 /* FFRequestResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFRequestResponse.m; sourceTree = "<group>"; };
 		F89940A71B0DE21A005C2765 /* FFSignatureGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFSignatureGenerator.h; sourceTree = "<group>"; };
 		F89940A81B0DE21A005C2765 /* FFSignatureGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFSignatureGenerator.m; sourceTree = "<group>"; };
-		F89940AA1B0DE21A005C2765 /* FFMusicForBaidu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFMusicForBaidu.h; sourceTree = "<group>"; };
-		F89940AB1B0DE21A005C2765 /* FFMusicForBaidu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFMusicForBaidu.m; sourceTree = "<group>"; };
-		F89940AC1B0DE21A005C2765 /* FFMusicForBaidu2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFMusicForBaidu2.h; sourceTree = "<group>"; };
-		F89940AD1B0DE21A005C2765 /* FFMusicForBaidu2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFMusicForBaidu2.m; sourceTree = "<group>"; };
-		F89940AE1B0DE21A005C2765 /* FFMusicForWeibo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFMusicForWeibo.h; sourceTree = "<group>"; };
-		F89940AF1B0DE21A005C2765 /* FFMusicForWeibo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFMusicForWeibo.m; sourceTree = "<group>"; };
 		F89940B01B0DE21A005C2765 /* FFApiManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFApiManager.h; sourceTree = "<group>"; };
 		F89940B11B0DE21A005C2765 /* FFApiManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFApiManager.m; sourceTree = "<group>"; };
-		F89940B41B0DE21A005C2765 /* FFMusicForBaiduGet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFMusicForBaiduGet.h; sourceTree = "<group>"; };
-		F89940B51B0DE21A005C2765 /* FFMusicForBaiduGet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFMusicForBaiduGet.m; sourceTree = "<group>"; };
-		F89940B61B0DE21A005C2765 /* FFMusicForBroker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFMusicForBroker.h; sourceTree = "<group>"; };
-		F89940B71B0DE21A005C2765 /* FFMusicForBroker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFMusicForBroker.m; sourceTree = "<group>"; };
-		F89940B81B0DE21A005C2765 /* FFMusicForBrokerPost.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFMusicForBrokerPost.h; sourceTree = "<group>"; };
-		F89940B91B0DE21A005C2765 /* FFMusicForBrokerPost.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFMusicForBrokerPost.m; sourceTree = "<group>"; };
-		F89940BA1B0DE21A005C2765 /* FFMusicForBrokerRest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFMusicForBrokerRest.h; sourceTree = "<group>"; };
-		F89940BB1B0DE21A005C2765 /* FFMusicForBrokerRest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFMusicForBrokerRest.m; sourceTree = "<group>"; };
 		F89940BC1B0DE21A005C2765 /* FFNetService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFNetService.h; sourceTree = "<group>"; };
 		F89940BD1B0DE21A005C2765 /* FFNetService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFNetService.m; sourceTree = "<group>"; };
 		F89940BE1B0DE21A005C2765 /* FFNetServiceFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFNetServiceFactory.h; sourceTree = "<group>"; };
@@ -132,6 +112,8 @@
 		F89940C21B0DE21A005C2765 /* FFRequestGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFRequestGenerator.m; sourceTree = "<group>"; };
 		F89940C31B0DE21A005C2765 /* FFRequestManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFRequestManager.h; sourceTree = "<group>"; };
 		F89940C41B0DE21A005C2765 /* FFRequestManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFRequestManager.m; sourceTree = "<group>"; };
+		F8CC37051B0F2ED6009DA9EE /* FFHomeFreshFresh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFHomeFreshFresh.h; sourceTree = "<group>"; };
+		F8CC37061B0F2ED6009DA9EE /* FFHomeFreshFresh.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFHomeFreshFresh.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -241,7 +223,6 @@
 				F89940A01B0DE21A005C2765 /* Debug */,
 				F89940A31B0DE21A005C2765 /* FFResponse */,
 				F89940A61B0DE21A005C2765 /* FFSignatureGenerator */,
-				F89940A91B0DE21A005C2765 /* ServiceConfig */,
 				F89940B01B0DE21A005C2765 /* FFApiManager.h */,
 				F89940B11B0DE21A005C2765 /* FFApiManager.m */,
 				F89940B21B0DE21A005C2765 /* XZNetService */,
@@ -330,19 +311,6 @@
 			path = FFSignatureGenerator;
 			sourceTree = "<group>";
 		};
-		F89940A91B0DE21A005C2765 /* ServiceConfig */ = {
-			isa = PBXGroup;
-			children = (
-				F89940AA1B0DE21A005C2765 /* FFMusicForBaidu.h */,
-				F89940AB1B0DE21A005C2765 /* FFMusicForBaidu.m */,
-				F89940AC1B0DE21A005C2765 /* FFMusicForBaidu2.h */,
-				F89940AD1B0DE21A005C2765 /* FFMusicForBaidu2.m */,
-				F89940AE1B0DE21A005C2765 /* FFMusicForWeibo.h */,
-				F89940AF1B0DE21A005C2765 /* FFMusicForWeibo.m */,
-			);
-			path = ServiceConfig;
-			sourceTree = "<group>";
-		};
 		F89940B21B0DE21A005C2765 /* XZNetService */ = {
 			isa = PBXGroup;
 			children = (
@@ -358,14 +326,8 @@
 		F89940B31B0DE21A005C2765 /* ServiceConfig */ = {
 			isa = PBXGroup;
 			children = (
-				F89940B41B0DE21A005C2765 /* FFMusicForBaiduGet.h */,
-				F89940B51B0DE21A005C2765 /* FFMusicForBaiduGet.m */,
-				F89940B61B0DE21A005C2765 /* FFMusicForBroker.h */,
-				F89940B71B0DE21A005C2765 /* FFMusicForBroker.m */,
-				F89940B81B0DE21A005C2765 /* FFMusicForBrokerPost.h */,
-				F89940B91B0DE21A005C2765 /* FFMusicForBrokerPost.m */,
-				F89940BA1B0DE21A005C2765 /* FFMusicForBrokerRest.h */,
-				F89940BB1B0DE21A005C2765 /* FFMusicForBrokerRest.m */,
+				F8CC37051B0F2ED6009DA9EE /* FFHomeFreshFresh.h */,
+				F8CC37061B0F2ED6009DA9EE /* FFHomeFreshFresh.m */,
 			);
 			path = ServiceConfig;
 			sourceTree = "<group>";
@@ -505,7 +467,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F89940DB1B0DE21A005C2765 /* FFMusicForBroker.m in Sources */,
 				F89940D91B0DE21A005C2765 /* FFApiManager.m in Sources */,
 				F89940CC1B0DE21A005C2765 /* NSObject+FFNetMethod.m in Sources */,
 				F89940E11B0DE21A005C2765 /* FFRequestManager.m in Sources */,
@@ -517,25 +478,20 @@
 				F89940DF1B0DE21A005C2765 /* FFNetServiceFactory.m in Sources */,
 				F89940D41B0DE21A005C2765 /* FFRequestResponse.m in Sources */,
 				F89940C81B0DE21A005C2765 /* FFUDIDGenerator.m in Sources */,
-				F89940D61B0DE21A005C2765 /* FFMusicForBaidu.m in Sources */,
 				F899405E1B0DE015005C2765 /* AppDelegate.m in Sources */,
 				F89940C61B0DE21A005C2765 /* FFKeychain.m in Sources */,
 				F89940CA1B0DE21A005C2765 /* NSDictionary+FFNetMethod.m in Sources */,
 				F89940D11B0DE21A005C2765 /* FFRequestResponse+FFNetMethod.m in Sources */,
 				F899405B1B0DE015005C2765 /* main.m in Sources */,
-				F89940DA1B0DE21A005C2765 /* FFMusicForBaiduGet.m in Sources */,
 				F89940DE1B0DE21A005C2765 /* FFNetService.m in Sources */,
 				F89940D31B0DE21A005C2765 /* FFNetDebug.m in Sources */,
-				F89940DD1B0DE21A005C2765 /* FFMusicForBrokerRest.m in Sources */,
 				F89940D21B0DE21A005C2765 /* FFAppContext.m in Sources */,
-				F89940D71B0DE21A005C2765 /* FFMusicForBaidu2.m in Sources */,
-				F89940DC1B0DE21A005C2765 /* FFMusicForBrokerPost.m in Sources */,
 				F89940CF1B0DE21A005C2765 /* NSURLRequest+FFNetMethod.m in Sources */,
 				F89940C91B0DE21A005C2765 /* NSArray+FFNetMethod.m in Sources */,
 				F89940C71B0DE21A005C2765 /* FFNetCommonParamsGenerator.m in Sources */,
+				F8CC37071B0F2ED6009DA9EE /* FFHomeFreshFresh.m in Sources */,
 				F89940CD1B0DE21A005C2765 /* NSString+MD5Addition.m in Sources */,
 				F89940E01B0DE21A005C2765 /* FFRequestGenerator.m in Sources */,
-				F89940D81B0DE21A005C2765 /* FFMusicForWeibo.m in Sources */,
 				F89940C51B0DE21A005C2765 /* FFDeviceInfo.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

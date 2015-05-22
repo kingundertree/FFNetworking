@@ -6,10 +6,10 @@
 //  Copyright (c) 2014年 xiazer. All rights reserved.
 //
 
-#import "FFMusicForBaiduGet.h"
+#import "FFHomeFreshFresh.h"
 #import "FFAppContext.h"
 
-@implementation FFMusicForBaiduGet
+@implementation FFHomeFreshFresh
 
 - (BOOL)isOnline
 {
@@ -18,7 +18,7 @@
 
 - (NSString *)onlineApiBaseUrl
 {
-    return @"http://music.baidu.com";
+    return @"http://freshfresh.com";
 }
 
 - (NSString *)onlineApiVersion
@@ -38,7 +38,7 @@
 
 - (NSString *)offlineApiBaseUrl
 {
-    return @"";
+    return @"http://test.freshfresh.com";
 }
 
 - (NSString *)offlineApiVersion

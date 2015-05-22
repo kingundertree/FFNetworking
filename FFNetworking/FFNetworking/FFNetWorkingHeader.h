@@ -10,10 +10,10 @@
 #define FFNetworking_FFNetWorkingHeader_h
 
 
-#define FFNetworkingGetServiceID @"GetServiceID"
-#define FFNetworkingPostServiceID @"PostServiceID"
-#define FFNetworkingRestfulGetServiceID @"RestfulGetServiceID"
-#define FFNetworkingRestfulPostServiceID @"RestfulPostServiceID"
+#define FFNetworkingGetServiceIDForFreshFresh @"GetServiceIDForFreshFresh"
+#define FFNetworkingPostServiceIDForFreshFresh @"PostServiceIDForFreshFresh"
+#define FFNetworkingRestfulGetServiceIDForFreshFresh @"RestfulGetServiceIDForFreshFresh"
+#define FFNetworkingRestfulPostServiceIDForFreshFresh @"RestfulPostServiceIDForFreshFresh"
 
 
 #endif

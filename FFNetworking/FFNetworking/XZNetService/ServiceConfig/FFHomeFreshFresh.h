@@ -8,6 +8,6 @@
 
 #import "FFNetService.h"
 
-@interface FFMusicForBaidu : FFNetService <FFNetServiceProtocal>
+@interface FFHomeFreshFresh : FFNetService <FFNetServiceProtocal>
 
 @end

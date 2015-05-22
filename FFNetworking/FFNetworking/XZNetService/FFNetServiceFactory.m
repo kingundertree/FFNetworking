@@ -8,9 +8,7 @@
 
 #import "FFNetServiceFactory.h"
 #import "FFNetWorkingHeader.h"
-#import "FFMusicForBaiduGet.h"
-#import "FFMusicForBrokerRest.h"
-#import "FFMusicForBrokerPost.h"
+#import "FFHomeFreshFresh.h"
 
 @interface FFNetServiceFactory ()
 @property(nonatomic, strong) NSMutableDictionary *serviceStorage;
@@ -44,14 +42,8 @@
 }
 
 - (FFNetService<FFNetServiceProtocal> *)newServiceWithIdentify:(NSString *)identify{
-    if ([identify isEqualToString:FFNetworkingGetServiceID]) {
-        return [[FFMusicForBaiduGet alloc] init];
-    }
-    if ([identify isEqualToString:FFNetworkingRestfulGetServiceID] || [identify isEqualToString:FFNetworkingRestfulPostServiceID]) {
-        return [[FFMusicForBrokerRest alloc] init];
-    }
-    if ([identify isEqualToString:FFNetworkingPostServiceID]) {
-        return [[FFMusicForBrokerPost alloc] init];
+    if ([identify isEqualToString:FFNetworkingGetServiceIDForFreshFresh]) {
+        return [[FFHomeFreshFresh alloc] init];
     }
     
     return nil;

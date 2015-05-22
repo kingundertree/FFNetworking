@@ -153,7 +153,7 @@
 }
 
 - (BOOL)isRest:(NSString *)serviceID{
-    if ([serviceID isEqualToString:FFNetworkingRestfulGetServiceID] || [serviceID isEqualToString:FFNetworkingRestfulPostServiceID]) {
+    if ([serviceID isEqualToString:FFNetworkingRestfulGetServiceIDForFreshFresh] || [serviceID isEqualToString:FFNetworkingRestfulPostServiceIDForFreshFresh]) {
         return YES;
     }
     
