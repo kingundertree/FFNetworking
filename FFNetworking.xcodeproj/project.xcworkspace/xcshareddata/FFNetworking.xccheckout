@@ -5,7 +5,7 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>711F9CD8-4670-469F-BF8E-3A7599B79D85</string>
+	<string>AD9722C4-03A9-4908-AF7C-3B8D17BE2E51</string>
 	<key>IDESourceControlProjectName</key>
 	<string>FFNetworking</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
@@ -14,11 +14,11 @@
 		<string>https://github.com/kingundertree/FFNetworking.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>FFNetworking.xcworkspace</string>
+	<string>FFNetworking.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>6CF85B689839D1112D6071FF5DCF05413F9730DD</key>
-		<string>..</string>
+		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>https://github.com/kingundertree/FFNetworking.git</string>
