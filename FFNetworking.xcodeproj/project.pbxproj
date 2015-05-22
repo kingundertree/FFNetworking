@@ -8,9 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		AEB84334D2000FE99CC050C6 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ECC9ACFB01249F8227AB52D9 /* libPods.a */; };
-		F899405B1B0DE015005C2765 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F899405A1B0DE015005C2765 /* main.m */; };
-		F899405E1B0DE015005C2765 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F899405D1B0DE015005C2765 /* AppDelegate.m */; };
-		F89940611B0DE015005C2765 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F89940601B0DE015005C2765 /* ViewController.m */; };
 		F89940641B0DE015005C2765 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F89940621B0DE015005C2765 /* Main.storyboard */; };
 		F89940661B0DE015005C2765 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F89940651B0DE015005C2765 /* Images.xcassets */; };
 		F89940691B0DE015005C2765 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = F89940671B0DE015005C2765 /* LaunchScreen.xib */; };
@@ -38,6 +35,10 @@
 		F89940E01B0DE21A005C2765 /* FFRequestGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = F89940C21B0DE21A005C2765 /* FFRequestGenerator.m */; };
 		F89940E11B0DE21A005C2765 /* FFRequestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F89940C41B0DE21A005C2765 /* FFRequestManager.m */; };
 		F8CC37071B0F2ED6009DA9EE /* FFHomeFreshFresh.m in Sources */ = {isa = PBXBuildFile; fileRef = F8CC37061B0F2ED6009DA9EE /* FFHomeFreshFresh.m */; };
+		F8CC373C1B0F3D07009DA9EE /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F8CC373A1B0F3D07009DA9EE /* Info.plist */; };
+		F8CC373D1B0F3D07009DA9EE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F8CC373B1B0F3D07009DA9EE /* main.m */; };
+		F8CC37421B0F3D1A009DA9EE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F8CC373F1B0F3D1A009DA9EE /* AppDelegate.m */; };
+		F8CC37431B0F3D1A009DA9EE /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8CC37411B0F3D1A009DA9EE /* ViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,12 +56,6 @@
 		ECC9ACFB01249F8227AB52D9 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		F34A822CEFD5087F203C0DFB /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		F89940551B0DE015005C2765 /* FFNetworking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FFNetworking.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		F89940591B0DE015005C2765 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F899405A1B0DE015005C2765 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		F899405C1B0DE015005C2765 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		F899405D1B0DE015005C2765 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		F899405F1B0DE015005C2765 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		F89940601B0DE015005C2765 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		F89940631B0DE015005C2765 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F89940651B0DE015005C2765 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		F89940681B0DE015005C2765 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -114,6 +109,12 @@
 		F89940C41B0DE21A005C2765 /* FFRequestManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFRequestManager.m; sourceTree = "<group>"; };
 		F8CC37051B0F2ED6009DA9EE /* FFHomeFreshFresh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFHomeFreshFresh.h; sourceTree = "<group>"; };
 		F8CC37061B0F2ED6009DA9EE /* FFHomeFreshFresh.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFHomeFreshFresh.m; sourceTree = "<group>"; };
+		F8CC373A1B0F3D07009DA9EE /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = view/Info.plist; sourceTree = "<group>"; };
+		F8CC373B1B0F3D07009DA9EE /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = view/main.m; sourceTree = "<group>"; };
+		F8CC373E1B0F3D1A009DA9EE /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = view/AppDelegate.h; sourceTree = "<group>"; };
+		F8CC373F1B0F3D1A009DA9EE /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = view/AppDelegate.m; sourceTree = "<group>"; };
+		F8CC37401B0F3D1A009DA9EE /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ViewController.h; path = view/ViewController.h; sourceTree = "<group>"; };
+		F8CC37411B0F3D1A009DA9EE /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ViewController.m; path = view/ViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -175,11 +176,11 @@
 		F89940571B0DE015005C2765 /* FFNetworking */ = {
 			isa = PBXGroup;
 			children = (
+				F8CC373E1B0F3D1A009DA9EE /* AppDelegate.h */,
+				F8CC373F1B0F3D1A009DA9EE /* AppDelegate.m */,
+				F8CC37401B0F3D1A009DA9EE /* ViewController.h */,
+				F8CC37411B0F3D1A009DA9EE /* ViewController.m */,
 				F89940801B0DE21A005C2765 /* FFNetworking */,
-				F899405C1B0DE015005C2765 /* AppDelegate.h */,
-				F899405D1B0DE015005C2765 /* AppDelegate.m */,
-				F899405F1B0DE015005C2765 /* ViewController.h */,
-				F89940601B0DE015005C2765 /* ViewController.m */,
 				F89940621B0DE015005C2765 /* Main.storyboard */,
 				F89940651B0DE015005C2765 /* Images.xcassets */,
 				F89940671B0DE015005C2765 /* LaunchScreen.xib */,
@@ -191,8 +192,8 @@
 		F89940581B0DE015005C2765 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				F89940591B0DE015005C2765 /* Info.plist */,
-				F899405A1B0DE015005C2765 /* main.m */,
+				F8CC373A1B0F3D07009DA9EE /* Info.plist */,
+				F8CC373B1B0F3D07009DA9EE /* main.m */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -414,6 +415,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F8CC373C1B0F3D07009DA9EE /* Info.plist in Resources */,
 				F89940641B0DE015005C2765 /* Main.storyboard in Resources */,
 				F89940691B0DE015005C2765 /* LaunchScreen.xib in Resources */,
 				F89940661B0DE015005C2765 /* Images.xcassets in Resources */,
@@ -470,28 +472,28 @@
 				F89940D91B0DE21A005C2765 /* FFApiManager.m in Sources */,
 				F89940CC1B0DE21A005C2765 /* NSObject+FFNetMethod.m in Sources */,
 				F89940E11B0DE21A005C2765 /* FFRequestManager.m in Sources */,
-				F89940611B0DE015005C2765 /* ViewController.m in Sources */,
 				F89940CB1B0DE21A005C2765 /* NSMutableString+FFNetMethod.m in Sources */,
 				F89940D01B0DE21A005C2765 /* UIDevice+FFIdentifierAddition.m in Sources */,
 				F89940D51B0DE21A005C2765 /* FFSignatureGenerator.m in Sources */,
+				F8CC37431B0F3D1A009DA9EE /* ViewController.m in Sources */,
 				F89940CE1B0DE21A005C2765 /* NSString+FFNetMethod.m in Sources */,
 				F89940DF1B0DE21A005C2765 /* FFNetServiceFactory.m in Sources */,
 				F89940D41B0DE21A005C2765 /* FFRequestResponse.m in Sources */,
 				F89940C81B0DE21A005C2765 /* FFUDIDGenerator.m in Sources */,
-				F899405E1B0DE015005C2765 /* AppDelegate.m in Sources */,
 				F89940C61B0DE21A005C2765 /* FFKeychain.m in Sources */,
 				F89940CA1B0DE21A005C2765 /* NSDictionary+FFNetMethod.m in Sources */,
 				F89940D11B0DE21A005C2765 /* FFRequestResponse+FFNetMethod.m in Sources */,
-				F899405B1B0DE015005C2765 /* main.m in Sources */,
 				F89940DE1B0DE21A005C2765 /* FFNetService.m in Sources */,
 				F89940D31B0DE21A005C2765 /* FFNetDebug.m in Sources */,
 				F89940D21B0DE21A005C2765 /* FFAppContext.m in Sources */,
 				F89940CF1B0DE21A005C2765 /* NSURLRequest+FFNetMethod.m in Sources */,
 				F89940C91B0DE21A005C2765 /* NSArray+FFNetMethod.m in Sources */,
 				F89940C71B0DE21A005C2765 /* FFNetCommonParamsGenerator.m in Sources */,
+				F8CC37421B0F3D1A009DA9EE /* AppDelegate.m in Sources */,
 				F8CC37071B0F2ED6009DA9EE /* FFHomeFreshFresh.m in Sources */,
 				F89940CD1B0DE21A005C2765 /* NSString+MD5Addition.m in Sources */,
 				F89940E01B0DE21A005C2765 /* FFRequestGenerator.m in Sources */,
+				F8CC373D1B0F3D07009DA9EE /* main.m in Sources */,
 				F89940C51B0DE21A005C2765 /* FFDeviceInfo.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
