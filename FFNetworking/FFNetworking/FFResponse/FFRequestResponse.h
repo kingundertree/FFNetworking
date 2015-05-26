@@ -11,6 +11,7 @@
 typedef NS_ENUM(NSInteger, FFNetWorkingResponseStatus){
     FFNetWorkingResponseStatusSuccess,
     FFNetWorkingResponseStatusTimeOut,
+    FFNetWorkingResponseStatusTokenInvalid,
     FFNetWorkingResponseStatusNetError,
     FFNetWorkingResponseStatusError
 };

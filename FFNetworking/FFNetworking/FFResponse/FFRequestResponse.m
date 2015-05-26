@@ -60,7 +60,21 @@
         // 除了超时以外，所有错误都当成是无网络
         if (error.code == NSURLErrorTimedOut) {
             result = FFNetWorkingResponseStatusTimeOut;
+        } else {
+            if ([error isKindOfClass:[NSDictionary class]]) {
+                NSDictionary *dict = (NSDictionary *)error;
+                NSDictionary *dic = dict[@"错误日志"];
+                if ([dic[@"errorcode"] isEqualToString:@"invalid customer token."]) {
+                    result = FFNetWorkingResponseStatusTokenInvalid;
+                }
+            } else if ([error isKindOfClass:[NSString class]]) {
+                NSString *errorCode =(NSString*)error;
+                if ([errorCode isEqualToString:@"invalid customer token."]) {
+                    result = FFNetWorkingResponseStatusTokenInvalid;
+                }
+            }
         }
+        
         return result;
     } else {
         return FFNetWorkingResponseStatusSuccess;
