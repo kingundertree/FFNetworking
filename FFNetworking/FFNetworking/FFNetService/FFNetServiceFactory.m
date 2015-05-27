@@ -42,7 +42,7 @@
 }
 
 - (FFNetService<FFNetServiceProtocal> *)newServiceWithIdentify:(NSString *)identify{
-    if ([identify isEqualToString:FFNetworkingGetServiceIDForFreshFresh]) {
+    if ([identify isEqualToString:FFNetworkingGetServiceIDForFreshFresh] || [identify isEqualToString:FFNetworkingPostServiceIDForFreshFresh]) {
         return [[FFHomeFreshFresh alloc] init];
     }
     
