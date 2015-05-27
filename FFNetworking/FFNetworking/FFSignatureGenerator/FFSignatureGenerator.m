@@ -21,10 +21,12 @@
 
 + (NSString *)signPostWithApiParams:(NSDictionary *)apiParams privateKey:(NSString *)privateKey publicKey:(NSString *)publicKey{
     NSMutableDictionary *signParams = [NSMutableDictionary dictionaryWithDictionary:apiParams];
-    signParams[@"api_key"] = publicKey;
+    if (publicKey && publicKey.length > 0) {
+        signParams[@"api_key"] = publicKey;
+    }
     NSString *signString = [signParams FFNet_urlParamsStringSignature:YES];
     
-    return [[NSString stringWithFormat:@"%@%@",signString,privateKey] STR_md5];
+    return [[NSString stringWithFormat:@"%@%@",signString,privateKey ? signParams : @""] STR_md5];
 }
 
 + (NSString *)signRestfulGetWithAllParams:(NSDictionary *)allParams methodName:(NSString *)methodName apiVersion:(NSString *)apiVersion privateKey:(NSString *)privateKey
