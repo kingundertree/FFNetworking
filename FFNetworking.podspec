@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
 
-  s.name         = "FFNetworking"
+  s.name         = "FFNetwork"
   s.version      = "1.0"
   s.summary      = ""
   s.description  = ""
