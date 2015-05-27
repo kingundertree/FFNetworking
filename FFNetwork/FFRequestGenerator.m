@@ -79,7 +79,8 @@ static NSTimeInterval kAIFNetworkingTimeoutSeconds = 20.0f;
 - (NSURLRequest *)generatePostRequestWithServiceIdentifier:(NSString *)serviceIdentifier requestParams:(NSDictionary *)requestParams methodName:(NSString *)methodName{
     FFNetService *service = [[FFNetServiceFactory shareInstance] serviceWithIdentifier:serviceIdentifier];
     
-    NSString *signature = [FFSignatureGenerator signPostWithApiParams:requestParams privateKey:service.privateKey publicKey:service.publicKey];
+//    NSString *signature = [FFSignatureGenerator signPostWithApiParams:requestParams privateKey:service.privateKey publicKey:service.publicKey];
+    NSString *signature = @"";
     NSString *urlString = [NSString stringWithFormat:@"%@%@/%@?api_key=%@&sig=%@&%@", service.apiBaseUrl, service.apiVersion, methodName, service.publicKey, signature, [[FFNetCommonParamsGenerator commonParamsDictionary] FFNet_urlParamsStringSignature:NO]];
 
     NSURLRequest *request = [self.httpRequestSerializer requestWithMethod:@"POST" URLString:urlString parameters:requestParams error:NULL];
@@ -150,11 +151,10 @@ static NSTimeInterval kAIFNetworkingTimeoutSeconds = 20.0f;
     [headerDic setValue:@"application/json" forKey:@"Accept"];
     [headerDic setValue:@"application/json" forKey:@"Content-Type"];
 
-#warning test token
-    NSString *token = @"OxXjntKz8Hv+G5b2Qts8L6AIlMaQz/FCT/LX1f+A61Hrx36tysEvFtoV7DV64sKB2+2garTXQBIeoHl0rfsuOi1fyoEIPrA5ynNfDk5gGoR8YTRSQiXkVFFpVmuzwDD7Um/BVbq2UK693Wr3/vbI/uzpHY61Gv6bp9j6oOO3zEgoo4kZJa2tgCEUxgm2MOBoDRe7F9ZmOQAXlGkqwZBtFcHTOEeLGVZBSQplNAxrHunHz5bkTwfQnrxdn50nCcbhWCtfulRYC+/jkLObSbPHmA==";
-    if (token) {
-        [headerDic setValue:token forKey:@"AuthToken"];
-    }
+//    NSString *token = @"OxXjntKz8Hv+G5b2Qts8L6AIlMaQz/FCT/LX1f+A61Hrx36tysEvFtoV7DV64sKB2+2garTXQBIeoHl0rfsuOi1fyoEIPrA5ynNfDk5gGoR8YTRSQiXkVFFpVmuzwDD7Um/BVbq2UK693Wr3/vbI/uzpHY61Gv6bp9j6oOO3zEgoo4kZJa2tgCEUxgm2MOBoDRe7F9ZmOQAXlGkqwZBtFcHTOEeLGVZBSQplNAxrHunHz5bkTwfQnrxdn50nCcbhWCtfulRYC+/jkLObSbPHmA==";
+//    if (token) {
+//        [headerDic setValue:token forKey:@"AuthToken"];
+//    }
 //    NSDictionary *loginResult = [[NSUserDefaults standardUserDefaults] objectForKey:@"anjuke_chat_login_info"];
 //    if (loginResult[@"auth_token"]) {
 //        [headerDic setValue:loginResult[@"auth_token"] forKey:@"AuthToken"];

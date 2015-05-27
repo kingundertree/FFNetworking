@@ -12,40 +12,40 @@ Pod::Spec.new do |s|
   s.source       = { :git => "https://github.com/kingundertree/FFNetworking.git" }
 
 
-  s.source_files  = 'FFNetworking', 'FFNetworking/FFNetworking/*.{h,m}'
+  s.source_files  = 'FFNetwork', 'FFNetwork/*.{h,m}'
 
   s.subspec 'Assist' do |ss|
-      ss.source_files = 'FFNetworking/FFNetworking/Assist/*.{h,m}'
+      ss.source_files = 'FFNetwork/Assist/*.{h,m}'
   end
 
   s.subspec 'Category' do |ss|
-      ss.source_files = 'FFNetworking/FFNetworking/Category/*.{h,m}'
+      ss.source_files = 'FFNetwork/Category/*.{h,m}'
       ss.frameworks = 'Security'
   end
 
   s.subspec 'Components' do |ss|
-      ss.source_files = 'FFNetworking/FFNetworking/Components/*.{h,m}'
+      ss.source_files = 'FFNetwork/Components/*.{h,m}'
       ss.frameworks = 'SystemConfiguration'
   end
 
   s.subspec 'Debug' do |ss|
-      ss.source_files = 'FFNetworking/FFNetworking/Debug/*.{h,m}'
+      ss.source_files = 'FFNetwork/Debug/*.{h,m}'
   end
 
   s.subspec 'FFNetService' do |ss|
-      ss.source_files = 'FFNetworking/FFNetworking/FFNetService/*.{h,m}'
+      ss.source_files = 'FFNetwork/FFNetService/*.{h,m}'
 
       ss.subspec 'ServiceConfig' do |sss|
-          sss.source_files = 'FFNetworking/FFNetworking/FFNetService/ServiceConfig/*.{h,m}'
+          sss.source_files = 'FFNetwork/FFNetService/ServiceConfig/*.{h,m}'
       end
   end
 
   s.subspec 'FFResponse' do |ss|
-      ss.source_files = 'FFNetworking/FFNetworking/FFResponse/*.{h,m}'
+      ss.source_files = 'FFNetwork/FFResponse/*.{h,m}'
   end  
 
   s.subspec 'FFSignatureGenerator' do |ss|
-      ss.source_files = 'FFNetworking/FFNetworking/FFSignatureGenerator/*.{h,m}'
+      ss.source_files = 'FFNetwork/FFSignatureGenerator/*.{h,m}'
   end  
 
 end

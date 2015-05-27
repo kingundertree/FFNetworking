@@ -175,7 +175,7 @@
 - (NSString *)appName
 {
     if (_appName == nil) {
-        _appName = @"FF_Music";
+        _appName = @"FreshFreshiOSApp";
     }
     return _appName;
 }

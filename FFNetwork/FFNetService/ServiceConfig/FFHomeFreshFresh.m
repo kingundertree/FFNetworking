@@ -48,12 +48,12 @@
 
 - (NSString *)offlinePrivateKey
 {
-    return self.onlinePrivateKey;
+    return @"";
 }
 
 - (NSString *)offlinePublicKey
 {
-    return self.offlinePublicKey;
+    return @"";
 }
 
 @end
