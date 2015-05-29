@@ -118,7 +118,7 @@
     [logString appendURLRequest:request];
     
     [logString appendFormat:@"\n\n**************************************************************\n*                         Request End                        *\n**************************************************************\n\n\n\n"];
-    FFLog(@"%@", logString);
+    NSLog(@"%@", logString);
 }
 
 - (void)logDebugInfoWithResponse:(NSHTTPURLResponse *)response resposeString:(NSString *)responseString request:(NSURLRequest *)request error:(NSError *)error
@@ -143,7 +143,7 @@
     
     [logString appendFormat:@"\n\n==============================================================\n=                        Response End                        =\n==============================================================\n\n\n\n"];
     
-    FFLog(@"%@", logString);
+    NSLog(@"%@", logString);
 }
 
 - (void)logDebugInfoWithCachedResponse:(FFRequestResponse *)response methodName:(NSString *)methodName serviceIdentifier:(FFNetService *)service
@@ -160,7 +160,7 @@
     [logString appendFormat:@"Content:\n\t%@\n\n", response.contentString];
     
     [logString appendFormat:@"\n\n==============================================================\n=                        Response End                        =\n==============================================================\n\n\n\n"];
-    FFLog(@"%@", logString);
+    NSLog(@"%@", logString);
 }
 
 @end
