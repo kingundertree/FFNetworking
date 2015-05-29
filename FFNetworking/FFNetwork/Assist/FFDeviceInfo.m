@@ -120,9 +120,9 @@
         NSNumber *freeFileSystemSizeInBytes = [dictionary objectForKey:NSFileSystemFreeSize];
         totalSpace = [fileSystemSizeInBytes unsignedLongLongValue];
         totalFreeSpace = [freeFileSystemSizeInBytes unsignedLongLongValue];
-        NSLog(@"Memory Capacity of %llu MiB with %llu MiB Free memory available.", ((totalSpace/1024ll)/1024ll), ((totalFreeSpace/1024ll)/1024ll));
+        FFLog(@"Memory Capacity of %llu MiB with %llu MiB Free memory available.", ((totalSpace/1024ll)/1024ll), ((totalFreeSpace/1024ll)/1024ll));
     } else {
-        NSLog(@"Error Obtaining System Memory Info: Domain = %@, Code = %ld", [error domain], (long)[error code]);
+        FFLog(@"Error Obtaining System Memory Info: Domain = %@, Code = %ld", [error domain], (long)[error code]);
     }
     
     return [NSString stringWithFormat:@"%llu", ((totalFreeSpace/1024ll)/1024ll)];

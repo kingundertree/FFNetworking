@@ -77,7 +77,6 @@
     CFRelease(uuid);
     
     NSString *uuidWithDate = (__bridge NSString *)string;
-    //    NSLog(@"%@", uuidWithDate);
     
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
     [formatter setDateFormat:@"yyyyMMddHHmm"];
