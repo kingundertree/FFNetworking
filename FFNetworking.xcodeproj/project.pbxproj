@@ -8,33 +8,33 @@
 
 /* Begin PBXBuildFile section */
 		AEB84334D2000FE99CC050C6 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ECC9ACFB01249F8227AB52D9 /* libPods.a */; };
-		F87362C71B181FF100E7865D /* FFDeviceInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = F87362921B181FF100E7865D /* FFDeviceInfo.m */; };
-		F87362C81B181FF100E7865D /* FFKeychain.m in Sources */ = {isa = PBXBuildFile; fileRef = F87362941B181FF100E7865D /* FFKeychain.m */; };
-		F87362C91B181FF100E7865D /* FFNetCommonParamsGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = F87362961B181FF100E7865D /* FFNetCommonParamsGenerator.m */; };
-		F87362CA1B181FF100E7865D /* FFUDIDGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = F87362981B181FF100E7865D /* FFUDIDGenerator.m */; };
-		F87362CB1B181FF100E7865D /* FFRequestResponse+FFNetMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = F873629B1B181FF100E7865D /* FFRequestResponse+FFNetMethod.m */; };
-		F87362CC1B181FF100E7865D /* NSArray+FFNetMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = F873629D1B181FF100E7865D /* NSArray+FFNetMethod.m */; };
-		F87362CD1B181FF100E7865D /* NSDictionary+FFNetMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = F873629F1B181FF100E7865D /* NSDictionary+FFNetMethod.m */; };
-		F87362CE1B181FF100E7865D /* NSMutableString+FFNetMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = F87362A11B181FF100E7865D /* NSMutableString+FFNetMethod.m */; };
-		F87362CF1B181FF100E7865D /* NSObject+FFNetMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = F87362A31B181FF100E7865D /* NSObject+FFNetMethod.m */; };
-		F87362D01B181FF100E7865D /* NSString+FFNetMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = F87362A51B181FF100E7865D /* NSString+FFNetMethod.m */; };
-		F87362D11B181FF100E7865D /* NSString+MD5Addition.m in Sources */ = {isa = PBXBuildFile; fileRef = F87362A71B181FF100E7865D /* NSString+MD5Addition.m */; };
-		F87362D21B181FF100E7865D /* NSURLRequest+FFNetMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = F87362A91B181FF100E7865D /* NSURLRequest+FFNetMethod.m */; };
-		F87362D31B181FF100E7865D /* UIDevice+FFIdentifierAddition.m in Sources */ = {isa = PBXBuildFile; fileRef = F87362AB1B181FF100E7865D /* UIDevice+FFIdentifierAddition.m */; };
-		F87362D41B181FF100E7865D /* FFAppContext.m in Sources */ = {isa = PBXBuildFile; fileRef = F87362AE1B181FF100E7865D /* FFAppContext.m */; };
-		F87362D51B181FF100E7865D /* FFNetDebug.m in Sources */ = {isa = PBXBuildFile; fileRef = F87362B11B181FF100E7865D /* FFNetDebug.m */; };
-		F87362D61B181FF100E7865D /* FFApiManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F87362B31B181FF100E7865D /* FFApiManager.m */; };
-		F87362D71B181FF100E7865D /* FFNetService.m in Sources */ = {isa = PBXBuildFile; fileRef = F87362B61B181FF100E7865D /* FFNetService.m */; };
-		F87362D81B181FF100E7865D /* FFNetServiceFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = F87362B81B181FF100E7865D /* FFNetServiceFactory.m */; };
-		F87362D91B181FF100E7865D /* FFHomeFreshFresh.m in Sources */ = {isa = PBXBuildFile; fileRef = F87362BB1B181FF100E7865D /* FFHomeFreshFresh.m */; };
-		F87362DA1B181FF100E7865D /* FFRequestGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = F87362BE1B181FF100E7865D /* FFRequestGenerator.m */; };
-		F87362DB1B181FF100E7865D /* FFRequestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F87362C01B181FF100E7865D /* FFRequestManager.m */; };
-		F87362DC1B181FF100E7865D /* FFRequestResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = F87362C31B181FF100E7865D /* FFRequestResponse.m */; };
-		F87362DD1B181FF100E7865D /* FFSignatureGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = F87362C61B181FF100E7865D /* FFSignatureGenerator.m */; };
 		F89940641B0DE015005C2765 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F89940621B0DE015005C2765 /* Main.storyboard */; };
 		F89940661B0DE015005C2765 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F89940651B0DE015005C2765 /* Images.xcassets */; };
 		F89940691B0DE015005C2765 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = F89940671B0DE015005C2765 /* LaunchScreen.xib */; };
 		F89940751B0DE015005C2765 /* FFNetworkingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F89940741B0DE015005C2765 /* FFNetworkingTests.m */; };
+		F8B9D1F31B18236A00F94125 /* FFDeviceInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = F8B9D1BE1B18236A00F94125 /* FFDeviceInfo.m */; };
+		F8B9D1F41B18236A00F94125 /* FFKeychain.m in Sources */ = {isa = PBXBuildFile; fileRef = F8B9D1C01B18236A00F94125 /* FFKeychain.m */; };
+		F8B9D1F51B18236A00F94125 /* FFNetCommonParamsGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = F8B9D1C21B18236A00F94125 /* FFNetCommonParamsGenerator.m */; };
+		F8B9D1F61B18236A00F94125 /* FFUDIDGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = F8B9D1C41B18236A00F94125 /* FFUDIDGenerator.m */; };
+		F8B9D1F71B18236A00F94125 /* FFRequestResponse+FFNetMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = F8B9D1C71B18236A00F94125 /* FFRequestResponse+FFNetMethod.m */; };
+		F8B9D1F81B18236A00F94125 /* NSArray+FFNetMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = F8B9D1C91B18236A00F94125 /* NSArray+FFNetMethod.m */; };
+		F8B9D1F91B18236A00F94125 /* NSDictionary+FFNetMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = F8B9D1CB1B18236A00F94125 /* NSDictionary+FFNetMethod.m */; };
+		F8B9D1FA1B18236A00F94125 /* NSMutableString+FFNetMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = F8B9D1CD1B18236A00F94125 /* NSMutableString+FFNetMethod.m */; };
+		F8B9D1FB1B18236A00F94125 /* NSObject+FFNetMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = F8B9D1CF1B18236A00F94125 /* NSObject+FFNetMethod.m */; };
+		F8B9D1FC1B18236A00F94125 /* NSString+FFNetMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = F8B9D1D11B18236A00F94125 /* NSString+FFNetMethod.m */; };
+		F8B9D1FD1B18236A00F94125 /* NSString+MD5Addition.m in Sources */ = {isa = PBXBuildFile; fileRef = F8B9D1D31B18236A00F94125 /* NSString+MD5Addition.m */; };
+		F8B9D1FE1B18236A00F94125 /* NSURLRequest+FFNetMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = F8B9D1D51B18236A00F94125 /* NSURLRequest+FFNetMethod.m */; };
+		F8B9D1FF1B18236A00F94125 /* UIDevice+FFIdentifierAddition.m in Sources */ = {isa = PBXBuildFile; fileRef = F8B9D1D71B18236A00F94125 /* UIDevice+FFIdentifierAddition.m */; };
+		F8B9D2001B18236A00F94125 /* FFAppContext.m in Sources */ = {isa = PBXBuildFile; fileRef = F8B9D1DA1B18236A00F94125 /* FFAppContext.m */; };
+		F8B9D2011B18236A00F94125 /* FFNetDebug.m in Sources */ = {isa = PBXBuildFile; fileRef = F8B9D1DD1B18236A00F94125 /* FFNetDebug.m */; };
+		F8B9D2021B18236A00F94125 /* FFApiManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F8B9D1DF1B18236A00F94125 /* FFApiManager.m */; };
+		F8B9D2031B18236A00F94125 /* FFNetService.m in Sources */ = {isa = PBXBuildFile; fileRef = F8B9D1E21B18236A00F94125 /* FFNetService.m */; };
+		F8B9D2041B18236A00F94125 /* FFNetServiceFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = F8B9D1E41B18236A00F94125 /* FFNetServiceFactory.m */; };
+		F8B9D2051B18236A00F94125 /* FFHomeFreshFresh.m in Sources */ = {isa = PBXBuildFile; fileRef = F8B9D1E71B18236A00F94125 /* FFHomeFreshFresh.m */; };
+		F8B9D2061B18236A00F94125 /* FFRequestGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = F8B9D1EA1B18236A00F94125 /* FFRequestGenerator.m */; };
+		F8B9D2071B18236A00F94125 /* FFRequestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F8B9D1EC1B18236A00F94125 /* FFRequestManager.m */; };
+		F8B9D2081B18236A00F94125 /* FFRequestResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = F8B9D1EF1B18236A00F94125 /* FFRequestResponse.m */; };
+		F8B9D2091B18236A00F94125 /* FFSignatureGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = F8B9D1F21B18236A00F94125 /* FFSignatureGenerator.m */; };
 		F8CC373C1B0F3D07009DA9EE /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F8CC373A1B0F3D07009DA9EE /* Info.plist */; };
 		F8CC373D1B0F3D07009DA9EE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F8CC373B1B0F3D07009DA9EE /* main.m */; };
 		F8CC37421B0F3D1A009DA9EE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F8CC373F1B0F3D1A009DA9EE /* AppDelegate.m */; };
@@ -55,53 +55,6 @@
 		D7B7A3324AB4AF4B638EAD80 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		ECC9ACFB01249F8227AB52D9 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		F34A822CEFD5087F203C0DFB /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
-		F87362911B181FF100E7865D /* FFDeviceInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFDeviceInfo.h; sourceTree = "<group>"; };
-		F87362921B181FF100E7865D /* FFDeviceInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFDeviceInfo.m; sourceTree = "<group>"; };
-		F87362931B181FF100E7865D /* FFKeychain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFKeychain.h; sourceTree = "<group>"; };
-		F87362941B181FF100E7865D /* FFKeychain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFKeychain.m; sourceTree = "<group>"; };
-		F87362951B181FF100E7865D /* FFNetCommonParamsGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFNetCommonParamsGenerator.h; sourceTree = "<group>"; };
-		F87362961B181FF100E7865D /* FFNetCommonParamsGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFNetCommonParamsGenerator.m; sourceTree = "<group>"; };
-		F87362971B181FF100E7865D /* FFUDIDGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFUDIDGenerator.h; sourceTree = "<group>"; };
-		F87362981B181FF100E7865D /* FFUDIDGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFUDIDGenerator.m; sourceTree = "<group>"; };
-		F873629A1B181FF100E7865D /* FFRequestResponse+FFNetMethod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FFRequestResponse+FFNetMethod.h"; sourceTree = "<group>"; };
-		F873629B1B181FF100E7865D /* FFRequestResponse+FFNetMethod.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "FFRequestResponse+FFNetMethod.m"; sourceTree = "<group>"; };
-		F873629C1B181FF100E7865D /* NSArray+FFNetMethod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+FFNetMethod.h"; sourceTree = "<group>"; };
-		F873629D1B181FF100E7865D /* NSArray+FFNetMethod.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+FFNetMethod.m"; sourceTree = "<group>"; };
-		F873629E1B181FF100E7865D /* NSDictionary+FFNetMethod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+FFNetMethod.h"; sourceTree = "<group>"; };
-		F873629F1B181FF100E7865D /* NSDictionary+FFNetMethod.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+FFNetMethod.m"; sourceTree = "<group>"; };
-		F87362A01B181FF100E7865D /* NSMutableString+FFNetMethod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableString+FFNetMethod.h"; sourceTree = "<group>"; };
-		F87362A11B181FF100E7865D /* NSMutableString+FFNetMethod.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableString+FFNetMethod.m"; sourceTree = "<group>"; };
-		F87362A21B181FF100E7865D /* NSObject+FFNetMethod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+FFNetMethod.h"; sourceTree = "<group>"; };
-		F87362A31B181FF100E7865D /* NSObject+FFNetMethod.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+FFNetMethod.m"; sourceTree = "<group>"; };
-		F87362A41B181FF100E7865D /* NSString+FFNetMethod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+FFNetMethod.h"; sourceTree = "<group>"; };
-		F87362A51B181FF100E7865D /* NSString+FFNetMethod.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+FFNetMethod.m"; sourceTree = "<group>"; };
-		F87362A61B181FF100E7865D /* NSString+MD5Addition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+MD5Addition.h"; sourceTree = "<group>"; };
-		F87362A71B181FF100E7865D /* NSString+MD5Addition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+MD5Addition.m"; sourceTree = "<group>"; };
-		F87362A81B181FF100E7865D /* NSURLRequest+FFNetMethod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURLRequest+FFNetMethod.h"; sourceTree = "<group>"; };
-		F87362A91B181FF100E7865D /* NSURLRequest+FFNetMethod.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURLRequest+FFNetMethod.m"; sourceTree = "<group>"; };
-		F87362AA1B181FF100E7865D /* UIDevice+FFIdentifierAddition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIDevice+FFIdentifierAddition.h"; sourceTree = "<group>"; };
-		F87362AB1B181FF100E7865D /* UIDevice+FFIdentifierAddition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+FFIdentifierAddition.m"; sourceTree = "<group>"; };
-		F87362AD1B181FF100E7865D /* FFAppContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFAppContext.h; sourceTree = "<group>"; };
-		F87362AE1B181FF100E7865D /* FFAppContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFAppContext.m; sourceTree = "<group>"; };
-		F87362B01B181FF100E7865D /* FFNetDebug.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFNetDebug.h; sourceTree = "<group>"; };
-		F87362B11B181FF100E7865D /* FFNetDebug.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFNetDebug.m; sourceTree = "<group>"; };
-		F87362B21B181FF100E7865D /* FFApiManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFApiManager.h; sourceTree = "<group>"; };
-		F87362B31B181FF100E7865D /* FFApiManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFApiManager.m; sourceTree = "<group>"; };
-		F87362B51B181FF100E7865D /* FFNetService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFNetService.h; sourceTree = "<group>"; };
-		F87362B61B181FF100E7865D /* FFNetService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFNetService.m; sourceTree = "<group>"; };
-		F87362B71B181FF100E7865D /* FFNetServiceFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFNetServiceFactory.h; sourceTree = "<group>"; };
-		F87362B81B181FF100E7865D /* FFNetServiceFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFNetServiceFactory.m; sourceTree = "<group>"; };
-		F87362BA1B181FF100E7865D /* FFHomeFreshFresh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFHomeFreshFresh.h; sourceTree = "<group>"; };
-		F87362BB1B181FF100E7865D /* FFHomeFreshFresh.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFHomeFreshFresh.m; sourceTree = "<group>"; };
-		F87362BC1B181FF100E7865D /* FFNetWorkingHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFNetWorkingHeader.h; sourceTree = "<group>"; };
-		F87362BD1B181FF100E7865D /* FFRequestGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFRequestGenerator.h; sourceTree = "<group>"; };
-		F87362BE1B181FF100E7865D /* FFRequestGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFRequestGenerator.m; sourceTree = "<group>"; };
-		F87362BF1B181FF100E7865D /* FFRequestManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFRequestManager.h; sourceTree = "<group>"; };
-		F87362C01B181FF100E7865D /* FFRequestManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFRequestManager.m; sourceTree = "<group>"; };
-		F87362C21B181FF100E7865D /* FFRequestResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFRequestResponse.h; sourceTree = "<group>"; };
-		F87362C31B181FF100E7865D /* FFRequestResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFRequestResponse.m; sourceTree = "<group>"; };
-		F87362C51B181FF100E7865D /* FFSignatureGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFSignatureGenerator.h; sourceTree = "<group>"; };
-		F87362C61B181FF100E7865D /* FFSignatureGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFSignatureGenerator.m; sourceTree = "<group>"; };
 		F89940551B0DE015005C2765 /* FFNetworking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FFNetworking.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F89940631B0DE015005C2765 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F89940651B0DE015005C2765 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -109,6 +62,53 @@
 		F899406E1B0DE015005C2765 /* FFNetworkingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FFNetworkingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F89940731B0DE015005C2765 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F89940741B0DE015005C2765 /* FFNetworkingTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FFNetworkingTests.m; sourceTree = "<group>"; };
+		F8B9D1BD1B18236A00F94125 /* FFDeviceInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFDeviceInfo.h; sourceTree = "<group>"; };
+		F8B9D1BE1B18236A00F94125 /* FFDeviceInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFDeviceInfo.m; sourceTree = "<group>"; };
+		F8B9D1BF1B18236A00F94125 /* FFKeychain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFKeychain.h; sourceTree = "<group>"; };
+		F8B9D1C01B18236A00F94125 /* FFKeychain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFKeychain.m; sourceTree = "<group>"; };
+		F8B9D1C11B18236A00F94125 /* FFNetCommonParamsGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFNetCommonParamsGenerator.h; sourceTree = "<group>"; };
+		F8B9D1C21B18236A00F94125 /* FFNetCommonParamsGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFNetCommonParamsGenerator.m; sourceTree = "<group>"; };
+		F8B9D1C31B18236A00F94125 /* FFUDIDGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFUDIDGenerator.h; sourceTree = "<group>"; };
+		F8B9D1C41B18236A00F94125 /* FFUDIDGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFUDIDGenerator.m; sourceTree = "<group>"; };
+		F8B9D1C61B18236A00F94125 /* FFRequestResponse+FFNetMethod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FFRequestResponse+FFNetMethod.h"; sourceTree = "<group>"; };
+		F8B9D1C71B18236A00F94125 /* FFRequestResponse+FFNetMethod.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "FFRequestResponse+FFNetMethod.m"; sourceTree = "<group>"; };
+		F8B9D1C81B18236A00F94125 /* NSArray+FFNetMethod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+FFNetMethod.h"; sourceTree = "<group>"; };
+		F8B9D1C91B18236A00F94125 /* NSArray+FFNetMethod.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+FFNetMethod.m"; sourceTree = "<group>"; };
+		F8B9D1CA1B18236A00F94125 /* NSDictionary+FFNetMethod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+FFNetMethod.h"; sourceTree = "<group>"; };
+		F8B9D1CB1B18236A00F94125 /* NSDictionary+FFNetMethod.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+FFNetMethod.m"; sourceTree = "<group>"; };
+		F8B9D1CC1B18236A00F94125 /* NSMutableString+FFNetMethod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableString+FFNetMethod.h"; sourceTree = "<group>"; };
+		F8B9D1CD1B18236A00F94125 /* NSMutableString+FFNetMethod.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableString+FFNetMethod.m"; sourceTree = "<group>"; };
+		F8B9D1CE1B18236A00F94125 /* NSObject+FFNetMethod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+FFNetMethod.h"; sourceTree = "<group>"; };
+		F8B9D1CF1B18236A00F94125 /* NSObject+FFNetMethod.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+FFNetMethod.m"; sourceTree = "<group>"; };
+		F8B9D1D01B18236A00F94125 /* NSString+FFNetMethod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+FFNetMethod.h"; sourceTree = "<group>"; };
+		F8B9D1D11B18236A00F94125 /* NSString+FFNetMethod.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+FFNetMethod.m"; sourceTree = "<group>"; };
+		F8B9D1D21B18236A00F94125 /* NSString+MD5Addition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+MD5Addition.h"; sourceTree = "<group>"; };
+		F8B9D1D31B18236A00F94125 /* NSString+MD5Addition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+MD5Addition.m"; sourceTree = "<group>"; };
+		F8B9D1D41B18236A00F94125 /* NSURLRequest+FFNetMethod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURLRequest+FFNetMethod.h"; sourceTree = "<group>"; };
+		F8B9D1D51B18236A00F94125 /* NSURLRequest+FFNetMethod.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURLRequest+FFNetMethod.m"; sourceTree = "<group>"; };
+		F8B9D1D61B18236A00F94125 /* UIDevice+FFIdentifierAddition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIDevice+FFIdentifierAddition.h"; sourceTree = "<group>"; };
+		F8B9D1D71B18236A00F94125 /* UIDevice+FFIdentifierAddition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+FFIdentifierAddition.m"; sourceTree = "<group>"; };
+		F8B9D1D91B18236A00F94125 /* FFAppContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFAppContext.h; sourceTree = "<group>"; };
+		F8B9D1DA1B18236A00F94125 /* FFAppContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFAppContext.m; sourceTree = "<group>"; };
+		F8B9D1DC1B18236A00F94125 /* FFNetDebug.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFNetDebug.h; sourceTree = "<group>"; };
+		F8B9D1DD1B18236A00F94125 /* FFNetDebug.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFNetDebug.m; sourceTree = "<group>"; };
+		F8B9D1DE1B18236A00F94125 /* FFApiManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFApiManager.h; sourceTree = "<group>"; };
+		F8B9D1DF1B18236A00F94125 /* FFApiManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFApiManager.m; sourceTree = "<group>"; };
+		F8B9D1E11B18236A00F94125 /* FFNetService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFNetService.h; sourceTree = "<group>"; };
+		F8B9D1E21B18236A00F94125 /* FFNetService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFNetService.m; sourceTree = "<group>"; };
+		F8B9D1E31B18236A00F94125 /* FFNetServiceFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFNetServiceFactory.h; sourceTree = "<group>"; };
+		F8B9D1E41B18236A00F94125 /* FFNetServiceFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFNetServiceFactory.m; sourceTree = "<group>"; };
+		F8B9D1E61B18236A00F94125 /* FFHomeFreshFresh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFHomeFreshFresh.h; sourceTree = "<group>"; };
+		F8B9D1E71B18236A00F94125 /* FFHomeFreshFresh.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFHomeFreshFresh.m; sourceTree = "<group>"; };
+		F8B9D1E81B18236A00F94125 /* FFNetWorkingHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFNetWorkingHeader.h; sourceTree = "<group>"; };
+		F8B9D1E91B18236A00F94125 /* FFRequestGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFRequestGenerator.h; sourceTree = "<group>"; };
+		F8B9D1EA1B18236A00F94125 /* FFRequestGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFRequestGenerator.m; sourceTree = "<group>"; };
+		F8B9D1EB1B18236A00F94125 /* FFRequestManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFRequestManager.h; sourceTree = "<group>"; };
+		F8B9D1EC1B18236A00F94125 /* FFRequestManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFRequestManager.m; sourceTree = "<group>"; };
+		F8B9D1EE1B18236A00F94125 /* FFRequestResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFRequestResponse.h; sourceTree = "<group>"; };
+		F8B9D1EF1B18236A00F94125 /* FFRequestResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFRequestResponse.m; sourceTree = "<group>"; };
+		F8B9D1F11B18236A00F94125 /* FFSignatureGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFSignatureGenerator.h; sourceTree = "<group>"; };
+		F8B9D1F21B18236A00F94125 /* FFSignatureGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFSignatureGenerator.m; sourceTree = "<group>"; };
 		F8CC373A1B0F3D07009DA9EE /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = view/Info.plist; sourceTree = "<group>"; };
 		F8CC373B1B0F3D07009DA9EE /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = view/main.m; sourceTree = "<group>"; };
 		F8CC373E1B0F3D1A009DA9EE /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = view/AppDelegate.h; sourceTree = "<group>"; };
@@ -153,124 +153,6 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		F873628F1B181FF100E7865D /* FFNetwork */ = {
-			isa = PBXGroup;
-			children = (
-				F87362901B181FF100E7865D /* Assist */,
-				F87362991B181FF100E7865D /* Category */,
-				F87362AC1B181FF100E7865D /* Components */,
-				F87362AF1B181FF100E7865D /* Debug */,
-				F87362B21B181FF100E7865D /* FFApiManager.h */,
-				F87362B31B181FF100E7865D /* FFApiManager.m */,
-				F87362B41B181FF100E7865D /* FFNetService */,
-				F87362BC1B181FF100E7865D /* FFNetWorkingHeader.h */,
-				F87362BD1B181FF100E7865D /* FFRequestGenerator.h */,
-				F87362BE1B181FF100E7865D /* FFRequestGenerator.m */,
-				F87362BF1B181FF100E7865D /* FFRequestManager.h */,
-				F87362C01B181FF100E7865D /* FFRequestManager.m */,
-				F87362C11B181FF100E7865D /* FFResponse */,
-				F87362C41B181FF100E7865D /* FFSignatureGenerator */,
-			);
-			path = FFNetwork;
-			sourceTree = "<group>";
-		};
-		F87362901B181FF100E7865D /* Assist */ = {
-			isa = PBXGroup;
-			children = (
-				F87362911B181FF100E7865D /* FFDeviceInfo.h */,
-				F87362921B181FF100E7865D /* FFDeviceInfo.m */,
-				F87362931B181FF100E7865D /* FFKeychain.h */,
-				F87362941B181FF100E7865D /* FFKeychain.m */,
-				F87362951B181FF100E7865D /* FFNetCommonParamsGenerator.h */,
-				F87362961B181FF100E7865D /* FFNetCommonParamsGenerator.m */,
-				F87362971B181FF100E7865D /* FFUDIDGenerator.h */,
-				F87362981B181FF100E7865D /* FFUDIDGenerator.m */,
-			);
-			path = Assist;
-			sourceTree = "<group>";
-		};
-		F87362991B181FF100E7865D /* Category */ = {
-			isa = PBXGroup;
-			children = (
-				F873629A1B181FF100E7865D /* FFRequestResponse+FFNetMethod.h */,
-				F873629B1B181FF100E7865D /* FFRequestResponse+FFNetMethod.m */,
-				F873629C1B181FF100E7865D /* NSArray+FFNetMethod.h */,
-				F873629D1B181FF100E7865D /* NSArray+FFNetMethod.m */,
-				F873629E1B181FF100E7865D /* NSDictionary+FFNetMethod.h */,
-				F873629F1B181FF100E7865D /* NSDictionary+FFNetMethod.m */,
-				F87362A01B181FF100E7865D /* NSMutableString+FFNetMethod.h */,
-				F87362A11B181FF100E7865D /* NSMutableString+FFNetMethod.m */,
-				F87362A21B181FF100E7865D /* NSObject+FFNetMethod.h */,
-				F87362A31B181FF100E7865D /* NSObject+FFNetMethod.m */,
-				F87362A41B181FF100E7865D /* NSString+FFNetMethod.h */,
-				F87362A51B181FF100E7865D /* NSString+FFNetMethod.m */,
-				F87362A61B181FF100E7865D /* NSString+MD5Addition.h */,
-				F87362A71B181FF100E7865D /* NSString+MD5Addition.m */,
-				F87362A81B181FF100E7865D /* NSURLRequest+FFNetMethod.h */,
-				F87362A91B181FF100E7865D /* NSURLRequest+FFNetMethod.m */,
-				F87362AA1B181FF100E7865D /* UIDevice+FFIdentifierAddition.h */,
-				F87362AB1B181FF100E7865D /* UIDevice+FFIdentifierAddition.m */,
-			);
-			path = Category;
-			sourceTree = "<group>";
-		};
-		F87362AC1B181FF100E7865D /* Components */ = {
-			isa = PBXGroup;
-			children = (
-				F87362AD1B181FF100E7865D /* FFAppContext.h */,
-				F87362AE1B181FF100E7865D /* FFAppContext.m */,
-			);
-			path = Components;
-			sourceTree = "<group>";
-		};
-		F87362AF1B181FF100E7865D /* Debug */ = {
-			isa = PBXGroup;
-			children = (
-				F87362B01B181FF100E7865D /* FFNetDebug.h */,
-				F87362B11B181FF100E7865D /* FFNetDebug.m */,
-			);
-			path = Debug;
-			sourceTree = "<group>";
-		};
-		F87362B41B181FF100E7865D /* FFNetService */ = {
-			isa = PBXGroup;
-			children = (
-				F87362B51B181FF100E7865D /* FFNetService.h */,
-				F87362B61B181FF100E7865D /* FFNetService.m */,
-				F87362B71B181FF100E7865D /* FFNetServiceFactory.h */,
-				F87362B81B181FF100E7865D /* FFNetServiceFactory.m */,
-				F87362B91B181FF100E7865D /* ServiceConfig */,
-			);
-			path = FFNetService;
-			sourceTree = "<group>";
-		};
-		F87362B91B181FF100E7865D /* ServiceConfig */ = {
-			isa = PBXGroup;
-			children = (
-				F87362BA1B181FF100E7865D /* FFHomeFreshFresh.h */,
-				F87362BB1B181FF100E7865D /* FFHomeFreshFresh.m */,
-			);
-			path = ServiceConfig;
-			sourceTree = "<group>";
-		};
-		F87362C11B181FF100E7865D /* FFResponse */ = {
-			isa = PBXGroup;
-			children = (
-				F87362C21B181FF100E7865D /* FFRequestResponse.h */,
-				F87362C31B181FF100E7865D /* FFRequestResponse.m */,
-			);
-			path = FFResponse;
-			sourceTree = "<group>";
-		};
-		F87362C41B181FF100E7865D /* FFSignatureGenerator */ = {
-			isa = PBXGroup;
-			children = (
-				F87362C51B181FF100E7865D /* FFSignatureGenerator.h */,
-				F87362C61B181FF100E7865D /* FFSignatureGenerator.m */,
-			);
-			path = FFSignatureGenerator;
-			sourceTree = "<group>";
-		};
 		F899404C1B0DE015005C2765 = {
 			isa = PBXGroup;
 			children = (
@@ -294,7 +176,7 @@
 		F89940571B0DE015005C2765 /* FFNetworking */ = {
 			isa = PBXGroup;
 			children = (
-				F873628F1B181FF100E7865D /* FFNetwork */,
+				F8B9D1BB1B18236A00F94125 /* FFNetwork */,
 				F8CC373E1B0F3D1A009DA9EE /* AppDelegate.h */,
 				F8CC373F1B0F3D1A009DA9EE /* AppDelegate.m */,
 				F8CC37401B0F3D1A009DA9EE /* ViewController.h */,
@@ -331,6 +213,124 @@
 				F89940731B0DE015005C2765 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F8B9D1BB1B18236A00F94125 /* FFNetwork */ = {
+			isa = PBXGroup;
+			children = (
+				F8B9D1BC1B18236A00F94125 /* Assist */,
+				F8B9D1C51B18236A00F94125 /* Category */,
+				F8B9D1D81B18236A00F94125 /* Components */,
+				F8B9D1DB1B18236A00F94125 /* Debug */,
+				F8B9D1DE1B18236A00F94125 /* FFApiManager.h */,
+				F8B9D1DF1B18236A00F94125 /* FFApiManager.m */,
+				F8B9D1E01B18236A00F94125 /* FFNetService */,
+				F8B9D1E81B18236A00F94125 /* FFNetWorkingHeader.h */,
+				F8B9D1E91B18236A00F94125 /* FFRequestGenerator.h */,
+				F8B9D1EA1B18236A00F94125 /* FFRequestGenerator.m */,
+				F8B9D1EB1B18236A00F94125 /* FFRequestManager.h */,
+				F8B9D1EC1B18236A00F94125 /* FFRequestManager.m */,
+				F8B9D1ED1B18236A00F94125 /* FFResponse */,
+				F8B9D1F01B18236A00F94125 /* FFSignatureGenerator */,
+			);
+			path = FFNetwork;
+			sourceTree = "<group>";
+		};
+		F8B9D1BC1B18236A00F94125 /* Assist */ = {
+			isa = PBXGroup;
+			children = (
+				F8B9D1BD1B18236A00F94125 /* FFDeviceInfo.h */,
+				F8B9D1BE1B18236A00F94125 /* FFDeviceInfo.m */,
+				F8B9D1BF1B18236A00F94125 /* FFKeychain.h */,
+				F8B9D1C01B18236A00F94125 /* FFKeychain.m */,
+				F8B9D1C11B18236A00F94125 /* FFNetCommonParamsGenerator.h */,
+				F8B9D1C21B18236A00F94125 /* FFNetCommonParamsGenerator.m */,
+				F8B9D1C31B18236A00F94125 /* FFUDIDGenerator.h */,
+				F8B9D1C41B18236A00F94125 /* FFUDIDGenerator.m */,
+			);
+			path = Assist;
+			sourceTree = "<group>";
+		};
+		F8B9D1C51B18236A00F94125 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				F8B9D1C61B18236A00F94125 /* FFRequestResponse+FFNetMethod.h */,
+				F8B9D1C71B18236A00F94125 /* FFRequestResponse+FFNetMethod.m */,
+				F8B9D1C81B18236A00F94125 /* NSArray+FFNetMethod.h */,
+				F8B9D1C91B18236A00F94125 /* NSArray+FFNetMethod.m */,
+				F8B9D1CA1B18236A00F94125 /* NSDictionary+FFNetMethod.h */,
+				F8B9D1CB1B18236A00F94125 /* NSDictionary+FFNetMethod.m */,
+				F8B9D1CC1B18236A00F94125 /* NSMutableString+FFNetMethod.h */,
+				F8B9D1CD1B18236A00F94125 /* NSMutableString+FFNetMethod.m */,
+				F8B9D1CE1B18236A00F94125 /* NSObject+FFNetMethod.h */,
+				F8B9D1CF1B18236A00F94125 /* NSObject+FFNetMethod.m */,
+				F8B9D1D01B18236A00F94125 /* NSString+FFNetMethod.h */,
+				F8B9D1D11B18236A00F94125 /* NSString+FFNetMethod.m */,
+				F8B9D1D21B18236A00F94125 /* NSString+MD5Addition.h */,
+				F8B9D1D31B18236A00F94125 /* NSString+MD5Addition.m */,
+				F8B9D1D41B18236A00F94125 /* NSURLRequest+FFNetMethod.h */,
+				F8B9D1D51B18236A00F94125 /* NSURLRequest+FFNetMethod.m */,
+				F8B9D1D61B18236A00F94125 /* UIDevice+FFIdentifierAddition.h */,
+				F8B9D1D71B18236A00F94125 /* UIDevice+FFIdentifierAddition.m */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		F8B9D1D81B18236A00F94125 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				F8B9D1D91B18236A00F94125 /* FFAppContext.h */,
+				F8B9D1DA1B18236A00F94125 /* FFAppContext.m */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		F8B9D1DB1B18236A00F94125 /* Debug */ = {
+			isa = PBXGroup;
+			children = (
+				F8B9D1DC1B18236A00F94125 /* FFNetDebug.h */,
+				F8B9D1DD1B18236A00F94125 /* FFNetDebug.m */,
+			);
+			path = Debug;
+			sourceTree = "<group>";
+		};
+		F8B9D1E01B18236A00F94125 /* FFNetService */ = {
+			isa = PBXGroup;
+			children = (
+				F8B9D1E11B18236A00F94125 /* FFNetService.h */,
+				F8B9D1E21B18236A00F94125 /* FFNetService.m */,
+				F8B9D1E31B18236A00F94125 /* FFNetServiceFactory.h */,
+				F8B9D1E41B18236A00F94125 /* FFNetServiceFactory.m */,
+				F8B9D1E51B18236A00F94125 /* ServiceConfig */,
+			);
+			path = FFNetService;
+			sourceTree = "<group>";
+		};
+		F8B9D1E51B18236A00F94125 /* ServiceConfig */ = {
+			isa = PBXGroup;
+			children = (
+				F8B9D1E61B18236A00F94125 /* FFHomeFreshFresh.h */,
+				F8B9D1E71B18236A00F94125 /* FFHomeFreshFresh.m */,
+			);
+			path = ServiceConfig;
+			sourceTree = "<group>";
+		};
+		F8B9D1ED1B18236A00F94125 /* FFResponse */ = {
+			isa = PBXGroup;
+			children = (
+				F8B9D1EE1B18236A00F94125 /* FFRequestResponse.h */,
+				F8B9D1EF1B18236A00F94125 /* FFRequestResponse.m */,
+			);
+			path = FFResponse;
+			sourceTree = "<group>";
+		};
+		F8B9D1F01B18236A00F94125 /* FFSignatureGenerator */ = {
+			isa = PBXGroup;
+			children = (
+				F8B9D1F11B18236A00F94125 /* FFSignatureGenerator.h */,
+				F8B9D1F21B18236A00F94125 /* FFSignatureGenerator.m */,
+			);
+			path = FFSignatureGenerator;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -469,32 +469,32 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F87362CC1B181FF100E7865D /* NSArray+FFNetMethod.m in Sources */,
-				F87362D41B181FF100E7865D /* FFAppContext.m in Sources */,
-				F87362DD1B181FF100E7865D /* FFSignatureGenerator.m in Sources */,
-				F87362D21B181FF100E7865D /* NSURLRequest+FFNetMethod.m in Sources */,
-				F87362D01B181FF100E7865D /* NSString+FFNetMethod.m in Sources */,
+				F8B9D1F81B18236A00F94125 /* NSArray+FFNetMethod.m in Sources */,
+				F8B9D2001B18236A00F94125 /* FFAppContext.m in Sources */,
+				F8B9D2091B18236A00F94125 /* FFSignatureGenerator.m in Sources */,
+				F8B9D1FE1B18236A00F94125 /* NSURLRequest+FFNetMethod.m in Sources */,
+				F8B9D1FC1B18236A00F94125 /* NSString+FFNetMethod.m in Sources */,
 				F8CC37431B0F3D1A009DA9EE /* ViewController.m in Sources */,
-				F87362DB1B181FF100E7865D /* FFRequestManager.m in Sources */,
-				F87362D61B181FF100E7865D /* FFApiManager.m in Sources */,
-				F87362C71B181FF100E7865D /* FFDeviceInfo.m in Sources */,
-				F87362CE1B181FF100E7865D /* NSMutableString+FFNetMethod.m in Sources */,
-				F87362CD1B181FF100E7865D /* NSDictionary+FFNetMethod.m in Sources */,
-				F87362D71B181FF100E7865D /* FFNetService.m in Sources */,
-				F87362D91B181FF100E7865D /* FFHomeFreshFresh.m in Sources */,
-				F87362C91B181FF100E7865D /* FFNetCommonParamsGenerator.m in Sources */,
-				F87362D51B181FF100E7865D /* FFNetDebug.m in Sources */,
-				F87362D81B181FF100E7865D /* FFNetServiceFactory.m in Sources */,
+				F8B9D2071B18236A00F94125 /* FFRequestManager.m in Sources */,
+				F8B9D2021B18236A00F94125 /* FFApiManager.m in Sources */,
+				F8B9D1F31B18236A00F94125 /* FFDeviceInfo.m in Sources */,
+				F8B9D1FA1B18236A00F94125 /* NSMutableString+FFNetMethod.m in Sources */,
+				F8B9D1F91B18236A00F94125 /* NSDictionary+FFNetMethod.m in Sources */,
+				F8B9D2031B18236A00F94125 /* FFNetService.m in Sources */,
+				F8B9D2051B18236A00F94125 /* FFHomeFreshFresh.m in Sources */,
+				F8B9D1F51B18236A00F94125 /* FFNetCommonParamsGenerator.m in Sources */,
+				F8B9D2011B18236A00F94125 /* FFNetDebug.m in Sources */,
+				F8B9D2041B18236A00F94125 /* FFNetServiceFactory.m in Sources */,
 				F8CC37421B0F3D1A009DA9EE /* AppDelegate.m in Sources */,
-				F87362D11B181FF100E7865D /* NSString+MD5Addition.m in Sources */,
-				F87362CA1B181FF100E7865D /* FFUDIDGenerator.m in Sources */,
-				F87362CF1B181FF100E7865D /* NSObject+FFNetMethod.m in Sources */,
-				F87362CB1B181FF100E7865D /* FFRequestResponse+FFNetMethod.m in Sources */,
-				F87362DA1B181FF100E7865D /* FFRequestGenerator.m in Sources */,
+				F8B9D1FD1B18236A00F94125 /* NSString+MD5Addition.m in Sources */,
+				F8B9D1F61B18236A00F94125 /* FFUDIDGenerator.m in Sources */,
+				F8B9D1FB1B18236A00F94125 /* NSObject+FFNetMethod.m in Sources */,
+				F8B9D1F71B18236A00F94125 /* FFRequestResponse+FFNetMethod.m in Sources */,
+				F8B9D2061B18236A00F94125 /* FFRequestGenerator.m in Sources */,
 				F8CC373D1B0F3D07009DA9EE /* main.m in Sources */,
-				F87362D31B181FF100E7865D /* UIDevice+FFIdentifierAddition.m in Sources */,
-				F87362DC1B181FF100E7865D /* FFRequestResponse.m in Sources */,
-				F87362C81B181FF100E7865D /* FFKeychain.m in Sources */,
+				F8B9D1FF1B18236A00F94125 /* UIDevice+FFIdentifierAddition.m in Sources */,
+				F8B9D2081B18236A00F94125 /* FFRequestResponse.m in Sources */,
+				F8B9D1F41B18236A00F94125 /* FFKeychain.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
