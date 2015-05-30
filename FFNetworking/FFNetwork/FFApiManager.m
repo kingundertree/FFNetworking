@@ -281,6 +281,20 @@
     }
 }
 
+- (void)cancleRequestWithTarget:(id)target {
+
+}
+
+- (void)cancleAllRequest {
+    NSArray *allKey = [self.dispatchTable allKeys];
+    if (allKey.count > 0) {
+        for (NSString *requestId in allKey) {
+            [self cancelRequestWithRequestID:requestId];
+        }
+    }
+}
+
+
 - (NSNumber *)generateRequestId
 {
     if (_recordedRequestId == nil) {
