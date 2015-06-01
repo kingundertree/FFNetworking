@@ -18,7 +18,7 @@
 
 - (NSString *)onlineApiBaseUrl
 {
-    return @"http://freshfresh.com/fresh2014";
+    return @"http://www.freshfresh.com";
 }
 
 - (NSString *)onlineApiVersion
