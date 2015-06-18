@@ -54,7 +54,7 @@
     }
     
     NSURLRequest *request = [[FFRequestGenerator sharedInstance] generateGETRequestWithServiceIdentifier:servieIdentifier requestParams:params methodName:methodName];
-
+    
     return [self callApiWithRequestSynchronously:request];
 }
 
@@ -78,14 +78,14 @@
     NSData *data = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&error];
     
     FFRequestResponse *FFResponse = [[FFRequestResponse alloc] initWithResponseString:nil
-                                                                       requestId:@(-1)
-                                                                         request:request
-                                                                    responseData:data
-                                                                           error:error];
+                                                                            requestId:@(-1)
+                                                                              request:request
+                                                                         responseData:data
+                                                                                error:error];
     [FFNetDebug logDebugInfoWithResponse:(NSHTTPURLResponse *)response
-                               resposeString:[[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding]
-                                     request:request
-                                       error:error];
+                           resposeString:[[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding]
+                                 request:request
+                                   error:error];
     return FFResponse;
 }
 
@@ -115,7 +115,7 @@
     NSURLRequest *request = [[FFRequestGenerator sharedInstance] generatePostRequestWithServiceIdentifier:servieIdentifier requestParams:params methodName:methodName];
     
     NSNumber *requestId = [self callApiWithRequest:request success:success fail:fail];
-    return [requestId integerValue];    
+    return [requestId integerValue];
 }
 
 - (NSInteger)callRestfulGETWithParams:(NSDictionary *)params serviceIdentifier:(NSString *)servieIdentifier methodName:(NSString *)methodName success:(FFCallback)success fail:(FFCallback)fail{
@@ -143,8 +143,8 @@
 - (FFRequestResponse *)callRestfulGETWithParams:(NSDictionary *)params serviceIdentifier:(NSString *)servieIdentifier methodName:(NSString *)methodName
 {
     NSURLRequest *request = [[FFRequestGenerator sharedInstance] generateRestfulGETRequestWithServiceIdentifier:servieIdentifier
-                                                                                                   requestParams:params
-                                                                                                      methodName:methodName];
+                                                                                                  requestParams:params
+                                                                                                     methodName:methodName];
     return [self callApiWithRequestSynchronously:request];
 }
 
@@ -154,82 +154,82 @@
 {
     // 之所以不用getter，是因为如果放到getter里面的话，每次调用self.recordedRequestId的时候值就都变了，违背了getter的初衷
     NSNumber *requestId = [self generateRequestId];
-//    NSTimeInterval time = [NSDate timeIntervalSinceReferenceDate];
+    //    NSTimeInterval time = [NSDate timeIntervalSinceReferenceDate];
     
     // 跑到这里的block的时候，就已经是主线程了。
     AFHTTPRequestOperation *httpRequestOperation = [self.operationManager HTTPRequestOperationWithRequest:request
                                                                                                   success:^(AFHTTPRequestOperation *operation, id responseObject)
-    {
-        AFHTTPRequestOperation *storedOperation = self.dispatchTable[requestId];
-        if (storedOperation == nil)
-        {
-            // 如果这个operation是被cancel的，那就不用处理回调了。
-            return;
-        } else {
-            [self.dispatchTable removeObjectForKey:requestId];
-        }
-
-        [FFNetDebug logDebugInfoWithResponse:operation.response
-                                   resposeString:operation.responseString
-                                         request:operation.request
-                                           error:NULL];
-        
-        FFRequestResponse *response = [[FFRequestResponse alloc]
-                                       initWithResponseString:operation.responseString
-                                       requestId:requestId
-                                       request:operation.request
-                                       responseData:operation.responseData
-                                       status:FFNetWorkingResponseStatusSuccess];
-        
-//        [self performanceWithResponse:response totalTime:[NSDate timeIntervalSinceReferenceDate] - time responseCode:operation.response.statusCode];
-        
-        if (operation.response.statusCode >= 200  && operation.response.statusCode < 300) {
-            success?success(response):nil;
-        } else {
-            // TODO: 先支持httpStatus，具体要做什么 等API后续 operation.response.statusCode
-            // 之后可能会支持 301， 304等
-            
-            // 性能日志
-//            if ([AIFPerformanceConfig shared].config.exception.http) {
-//                [AIFPerformanceReporter reportWithModel:[AIFPerformanceModel modelWithType:AIFPerformanceLogTypeException
-//                                                                                   content:AIFPerformanceContentTypeApi
-//                                                                                    values:@{
-//                                                                                             @"url":[request.URL absoluteString],
-//                                                                                             @"content":@"",
-//                                                                                             @"responseCode":@(operation.response.statusCode)
-//                                                                                             }]];
-//            }
-            
-            fail?fail(response):nil;
-        }
-        
-    }failure:^(AFHTTPRequestOperation *operation, NSError *error)
-    {
-        AFHTTPRequestOperation *storedOperation = self.dispatchTable[requestId];
-        if (storedOperation == nil) {
-            // 如果这个operation是被cancel的，那就不用处理回调了。
-            return;
-        } else {
-            [self.dispatchTable removeObjectForKey:requestId];
-        }
-        
-        [FFNetDebug logDebugInfoWithResponse:operation.response
-                               resposeString:operation.responseString
-                                     request:operation.request
-                                       error:error];
-
-        FFRequestResponse *response = [[FFRequestResponse alloc]
-                                       initWithResponseString:operation.responseString
-                                       requestId:requestId
-                                       request:operation.request
-                                       responseData:operation.responseData
-                                       error:error];
-//        [self performanceWithResponse:response
-//                            totalTime:[NSDate timeIntervalSinceReferenceDate] - time
-//                         responseCode:operation.response.statusCode];
-        
-        fail?fail(response):nil;
-    }];
+                                                    {
+                                                        AFHTTPRequestOperation *storedOperation = self.dispatchTable[requestId];
+                                                        if (storedOperation == nil)
+                                                        {
+                                                            // 如果这个operation是被cancel的，那就不用处理回调了。
+                                                            return;
+                                                        } else {
+                                                            [self.dispatchTable removeObjectForKey:requestId];
+                                                        }
+                                                        
+                                                        [FFNetDebug logDebugInfoWithResponse:operation.response
+                                                                               resposeString:operation.responseString
+                                                                                     request:operation.request
+                                                                                       error:NULL];
+                                                        
+                                                        FFRequestResponse *response = [[FFRequestResponse alloc]
+                                                                                       initWithResponseString:operation.responseString
+                                                                                       requestId:requestId
+                                                                                       request:operation.request
+                                                                                       responseData:operation.responseData
+                                                                                       status:FFNetWorkingResponseStatusSuccess];
+                                                        
+                                                        //        [self performanceWithResponse:response totalTime:[NSDate timeIntervalSinceReferenceDate] - time responseCode:operation.response.statusCode];
+                                                        
+                                                        if (operation.response.statusCode >= 200  && operation.response.statusCode < 300) {
+                                                            success?success(response):nil;
+                                                        } else {
+                                                            // TODO: 先支持httpStatus，具体要做什么 等API后续 operation.response.statusCode
+                                                            // 之后可能会支持 301， 304等
+                                                            
+                                                            // 性能日志
+                                                            //            if ([AIFPerformanceConfig shared].config.exception.http) {
+                                                            //                [AIFPerformanceReporter reportWithModel:[AIFPerformanceModel modelWithType:AIFPerformanceLogTypeException
+                                                            //                                                                                   content:AIFPerformanceContentTypeApi
+                                                            //                                                                                    values:@{
+                                                            //                                                                                             @"url":[request.URL absoluteString],
+                                                            //                                                                                             @"content":@"",
+                                                            //                                                                                             @"responseCode":@(operation.response.statusCode)
+                                                            //                                                                                             }]];
+                                                            //            }
+                                                            
+                                                            fail?fail(response):nil;
+                                                        }
+                                                        
+                                                    }failure:^(AFHTTPRequestOperation *operation, NSError *error)
+                                                    {
+                                                        AFHTTPRequestOperation *storedOperation = self.dispatchTable[requestId];
+                                                        if (storedOperation == nil) {
+                                                            // 如果这个operation是被cancel的，那就不用处理回调了。
+                                                            return;
+                                                        } else {
+                                                            [self.dispatchTable removeObjectForKey:requestId];
+                                                        }
+                                                        
+                                                        [FFNetDebug logDebugInfoWithResponse:operation.response
+                                                                               resposeString:operation.responseString
+                                                                                     request:operation.request
+                                                                                       error:error];
+                                                        
+                                                        FFRequestResponse *response = [[FFRequestResponse alloc]
+                                                                                       initWithResponseString:operation.responseString
+                                                                                       requestId:requestId
+                                                                                       request:operation.request
+                                                                                       responseData:operation.responseData
+                                                                                       error:error];
+                                                        //        [self performanceWithResponse:response
+                                                        //                            totalTime:[NSDate timeIntervalSinceReferenceDate] - time
+                                                        //                         responseCode:operation.response.statusCode];
+                                                        
+                                                        fail?fail(response):nil;
+                                                    }];
     
     self.dispatchTable[requestId] = httpRequestOperation;
     [[self.operationManager operationQueue] addOperation:httpRequestOperation];
@@ -280,20 +280,6 @@
         [self cancelRequestWithRequestID:requestId];
     }
 }
-
-- (void)cancleRequestWithTarget:(id)target {
-
-}
-
-- (void)cancleAllRequest {
-    NSArray *allKey = [self.dispatchTable allKeys];
-    if (allKey.count > 0) {
-        for (NSString *requestId in allKey) {
-            [self cancelRequestWithRequestID:requestId];
-        }
-    }
-}
-
 
 - (NSNumber *)generateRequestId
 {

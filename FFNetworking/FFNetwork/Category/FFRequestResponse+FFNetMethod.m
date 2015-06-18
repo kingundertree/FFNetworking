@@ -14,6 +14,8 @@
     enum FFNetWorkingResponseStatus status;
     if (response.status == FFNetWorkingResponseStatusSuccess) {
         status = FFNetWorkingResponseStatusSuccess;
+    } else if (response.status == FFNetWorkingResponseStatusTokenInvalid) {
+        status = FFNetWorkingResponseStatusTokenInvalid;
     } else {
         status = FFNetWorkingResponseStatusError;
     }
@@ -27,6 +29,8 @@
     response.requestID = (FFRequestID)self.requestId;
     if (self.status == FFNetWorkingResponseStatusSuccess) {
         response.status = FFNetWorkingResponseStatusSuccess;
+    } else if (self.status == FFNetWorkingResponseStatusTokenInvalid) {
+        response.status = FFNetWorkingResponseStatusTokenInvalid;
     } else {
         response.status = FFNetWorkingResponseStatusError;
     }
