@@ -281,6 +281,15 @@
     }
 }
 
+- (void)cancelAllRequest
+{
+    if (self.dispatchTable.allKeys.count > 0) {
+        for (NSNumber *requestId in self.dispatchTable.allKeys) {
+            [self cancelRequestWithRequestID:requestId];
+        }
+    }
+}
+
 - (NSNumber *)generateRequestId
 {
     if (_recordedRequestId == nil) {

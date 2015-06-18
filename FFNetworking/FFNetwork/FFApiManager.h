@@ -43,6 +43,5 @@ typedef NS_ENUM(NSUInteger, FFNetworkDetailStatus)
 - (void)cancelRequest:(FFRequestID)requestID;
 - (void)cancelRequestsWithTarget:(id)target;
 - (void)cancelRequestWithRequestID:(NSNumber *)requestID;
-- (void)cancleRequestWithTarget:(id)target;
-- (void)cancleAllRequest;
+- (void)cancelAllRequest;
 @end
