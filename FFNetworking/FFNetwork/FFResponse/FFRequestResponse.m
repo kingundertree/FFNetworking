@@ -63,13 +63,12 @@
         } else {
             if ([error isKindOfClass:[NSDictionary class]]) {
                 NSDictionary *dict = (NSDictionary *)error;
-                NSDictionary *dic = dict[@"错误日志"];
-                if ([dic[@"errorcode"] isEqualToString:@"invalid customer token."]) {
+                if (dict[@"errorcode"] && [dict[@"errorcode"] isEqualToString:@"invalid customer token."]) {
                     result = FFNetWorkingResponseStatusTokenInvalid;
                 }
             } else if ([error isKindOfClass:[NSString class]]) {
                 NSString *errorCode =(NSString*)error;
-                if ([errorCode isEqualToString:@"invalid customer token."]) {
+                if (errorCode && [errorCode isEqualToString:@"invalid customer token."]) {
                     result = FFNetWorkingResponseStatusTokenInvalid;
                 }
             }
@@ -86,7 +85,7 @@
     
     if (requestStr) {
         NSDictionary *requestDic = [self dictionaryWithJsonString:requestStr];
-        if (requestDic[@"result"] && ([requestDic[@"errorcode"] isEqualToString:@"invalid customer token."] || [requestDic[@"errorcode"] isEqualToString:@"invalid customer token."])) {
+        if (requestDic[@"result"] && ([requestDic[@"errorcode"] isEqualToString:@"invalid customer token."])) {
             result = FFNetWorkingResponseStatusTokenInvalid;
             
             return result;
