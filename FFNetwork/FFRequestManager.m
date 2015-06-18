@@ -43,15 +43,15 @@
                                                         serviceIdentifier:serviceID
                                                                methodName:methodName
                                                                   success:^(FFRequestResponse *response)
-    {
-        if ([target respondsToSelector:action]) {
-            [target performSelector:action withObject:[response returnNetworkResponse] afterDelay:0.0];
-        }
-    } fail:^(FFRequestResponse *response) {
-        if ([target respondsToSelector:action]) {
-            [target performSelector:action withObject:[response returnNetworkResponse] afterDelay:0.0];
-        }
-    }];
+                           {
+                               if ([target respondsToSelector:action]) {
+                                   [target performSelector:action withObject:[response returnNetworkResponse] afterDelay:0.0];
+                               }
+                           } fail:^(FFRequestResponse *response) {
+                               if ([target respondsToSelector:action]) {
+                                   [target performSelector:action withObject:[response returnNetworkResponse] afterDelay:0.0];
+                               }
+                           }];
     
     return (FFRequestID)requestId;
 }
@@ -86,7 +86,7 @@
     if ([self isRest:serviceID]) {
         return [self syncRESTGetWithServiceID:serviceID methodName:methodName params:params];
     }
-
+    
     return [[FFApiManager shareInstance] callPostWithParams:params
                                           serviceIdentifier:serviceID
                                                  methodName:methodName];
@@ -109,7 +109,7 @@
                                    [target performSelector:action withObject:[response returnNetworkResponse] afterDelay:0.0];
                                }
                            }];
-
+    
     
     return (FFRequestID)requestId;
 }
@@ -130,7 +130,7 @@
                                    [target performSelector:action withObject:[response returnNetworkResponse] afterDelay:0.0];
                                }
                            }];
-
+    
     return (FFRequestID)requestId;
 }
 - (FFRequestResponse *)syncRESTPostWithServiceID:(NSString *)serviceID methodName:(NSString *)methodName params:(NSDictionary *)params{
