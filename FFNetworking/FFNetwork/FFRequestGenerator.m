@@ -58,16 +58,16 @@ static NSTimeInterval kAIFNetworkingTimeoutSeconds = 20.0f;
 
 - (NSURLRequest *)generateGETRequestWithServiceIdentifier:(NSString *)serviceIdentifier requestParams:(NSDictionary *)requestParams methodName:(NSString *)methodName{
     FFNetService *service = [[FFNetServiceFactory shareInstance] serviceWithIdentifier:serviceIdentifier];
-
+    
     NSMutableDictionary *sigParams = [NSMutableDictionary dictionaryWithDictionary:requestParams];
-//    sigParams[@"api_key"] = service.publicKey;
+    //    sigParams[@"api_key"] = service.publicKey;
     NSString *signature = [FFSignatureGenerator signGetWithSigParams:sigParams methodName:methodName apiVersion:service.apiVersion privateKey:service.privateKey publicKey:service.publicKey];
-
+    
     NSMutableDictionary *allParams = [NSMutableDictionary dictionaryWithDictionary:[FFNetCommonParamsGenerator commonParamsDictionary]];
     [allParams addEntriesFromDictionary:sigParams];
-//    NSString *urlString = [NSString stringWithFormat:@"%@%@/%@?%@&sig=%@", service.apiBaseUrl, service.apiVersion, methodName, [allParams FFNet_urlParamsStringSignature:NO], signature];
+    //    NSString *urlString = [NSString stringWithFormat:@"%@%@/%@?%@&sig=%@", service.apiBaseUrl, service.apiVersion, methodName, [allParams FFNet_urlParamsStringSignature:NO], signature];
     NSString *urlString = [NSString stringWithFormat:@"%@/%@?%@&sig=%@", service.apiBaseUrl, methodName, [allParams FFNet_urlParamsStringSignature:NO], signature];
-
+    
     NSMutableURLRequest *request = [self.httpRequestSerializer requestWithMethod:@"GET" URLString:urlString parameters:nil error:NULL];
     request.timeoutInterval = 20;
     request.requestParams = requestParams;
@@ -79,13 +79,23 @@ static NSTimeInterval kAIFNetworkingTimeoutSeconds = 20.0f;
 - (NSURLRequest *)generatePostRequestWithServiceIdentifier:(NSString *)serviceIdentifier requestParams:(NSDictionary *)requestParams methodName:(NSString *)methodName{
     FFNetService *service = [[FFNetServiceFactory shareInstance] serviceWithIdentifier:serviceIdentifier];
     
-//    NSString *signature = [FFSignatureGenerator signPostWithApiParams:requestParams privateKey:service.privateKey publicKey:service.publicKey];
+    //    NSString *signature = [FFSignatureGenerator signPostWithApiParams:requestParams privateKey:service.privateKey publicKey:service.publicKey];
     NSString *signature = @"";
-    NSString *urlString = [NSString stringWithFormat:@"%@%@/%@?api_key=%@&sig=%@&%@", service.apiBaseUrl, service.apiVersion, methodName, service.publicKey, signature, [[FFNetCommonParamsGenerator commonParamsDictionary] FFNet_urlParamsStringSignature:NO]];
-
-    NSURLRequest *request = [self.httpRequestSerializer requestWithMethod:@"POST" URLString:urlString parameters:requestParams error:NULL];
+    NSString *baseUrlStr = [NSString stringWithFormat:@"%@%@/%@",service.apiBaseUrl, service.apiVersion, methodName];
+    
+    NSMutableDictionary *publicParams = [NSMutableDictionary dictionaryWithDictionary:[FFNetCommonParamsGenerator commonParamsDictionary]];
+    [publicParams setObject:service.publicKey forKey:@"api_key"];
+    [publicParams setObject:signature forKey:@"sig"];
+    
+    NSMutableURLRequest *request = [self.httpRequestSerializer requestWithMethod:@"POST" URLString:baseUrlStr parameters:requestParams error:NULL];
     request.requestParams = requestParams;
-
+    for (NSString *key in publicParams) {
+        NSString *headerStr = publicParams[key];
+        if (headerStr && headerStr.length > 0) {
+            [request setValue:key forHTTPHeaderField:headerStr ? headerStr : @""];
+        }
+    }
+    
     [FFNetDebug logDebugInfoWithRequest:request apiName:methodName service:service requestParams:requestParams httpMethod:@"POST"];
     return request;
 }
@@ -94,7 +104,7 @@ static NSTimeInterval kAIFNetworkingTimeoutSeconds = 20.0f;
 {
     NSMutableDictionary *allParams = [NSMutableDictionary dictionaryWithDictionary:[FFNetCommonParamsGenerator commonParamsDictionary]];
     [allParams addEntriesFromDictionary:requestParams];
-
+    
     FFNetService *service = [[FFNetServiceFactory shareInstance] serviceWithIdentifier:serviceIdentifier];
     NSString *signature = [FFSignatureGenerator signRestfulGetWithAllParams:requestParams methodName:methodName apiVersion:service.apiVersion privateKey:service.privateKey];
     NSString *urlString = [NSString stringWithFormat:@"%@%@/%@?%@", service.apiBaseUrl, service.apiVersion, methodName, [allParams FFNet_urlParamsStringSignature:NO]];
@@ -106,7 +116,7 @@ static NSTimeInterval kAIFNetworkingTimeoutSeconds = 20.0f;
         [request setValue:obj forHTTPHeaderField:key];
     }];
     request.requestParams = requestParams;
-
+    
     [FFNetDebug logDebugInfoWithRequest:request apiName:methodName service:service requestParams:requestParams httpMethod:[NSString stringWithFormat:@"Restful %@",httpMethod]];
     return request;
 }
@@ -128,7 +138,7 @@ static NSTimeInterval kAIFNetworkingTimeoutSeconds = 20.0f;
     request.requestParams = requestParams;
     
     [FFNetDebug logDebugInfoWithRequest:request apiName:methodName service:service requestParams:requestParams httpMethod:[NSString stringWithFormat:@"Restful %@",httpMethod]];
-
+    
     return request;
 }
 
@@ -150,16 +160,17 @@ static NSTimeInterval kAIFNetworkingTimeoutSeconds = 20.0f;
     [headerDic setValue:service.publicKey forKey:@"key"];
     [headerDic setValue:@"application/json" forKey:@"Accept"];
     [headerDic setValue:@"application/json" forKey:@"Content-Type"];
-
-//    NSString *token = @"OxXjntKz8Hv+G5b2Qts8L6AIlMaQz/FCT/LX1f+A61Hrx36tysEvFtoV7DV64sKB2+2garTXQBIeoHl0rfsuOi1fyoEIPrA5ynNfDk5gGoR8YTRSQiXkVFFpVmuzwDD7Um/BVbq2UK693Wr3/vbI/uzpHY61Gv6bp9j6oOO3zEgoo4kZJa2tgCEUxgm2MOBoDRe7F9ZmOQAXlGkqwZBtFcHTOEeLGVZBSQplNAxrHunHz5bkTwfQnrxdn50nCcbhWCtfulRYC+/jkLObSbPHmA==";
-//    if (token) {
-//        [headerDic setValue:token forKey:@"AuthToken"];
-//    }
-//    NSDictionary *loginResult = [[NSUserDefaults standardUserDefaults] objectForKey:@"anjuke_chat_login_info"];
-//    if (loginResult[@"auth_token"]) {
-//        [headerDic setValue:loginResult[@"auth_token"] forKey:@"AuthToken"];
-//    }
+    
+    //    NSString *token = @"OxXjntKz8Hv+G5b2Qts8L6AIlMaQz/FCT/LX1f+A61Hrx36tysEvFtoV7DV64sKB2+2garTXQBIeoHl0rfsuOi1fyoEIPrA5ynNfDk5gGoR8YTRSQiXkVFFpVmuzwDD7Um/BVbq2UK693Wr3/vbI/uzpHY61Gv6bp9j6oOO3zEgoo4kZJa2tgCEUxgm2MOBoDRe7F9ZmOQAXlGkqwZBtFcHTOEeLGVZBSQplNAxrHunHz5bkTwfQnrxdn50nCcbhWCtfulRYC+/jkLObSbPHmA==";
+    //    if (token) {
+    //        [headerDic setValue:token forKey:@"AuthToken"];
+    //    }
+    //    NSDictionary *loginResult = [[NSUserDefaults standardUserDefaults] objectForKey:@"anjuke_chat_login_info"];
+    //    if (loginResult[@"auth_token"]) {
+    //        [headerDic setValue:loginResult[@"auth_token"] forKey:@"AuthToken"];
+    //    }
     return headerDic;
 }
+
 
 @end
