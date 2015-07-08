@@ -62,10 +62,19 @@
             result = FFNetWorkingResponseStatusTimeOut;
         } else {
             if ([error isKindOfClass:[NSDictionary class]]) {
-                NSDictionary *dict = (NSDictionary *)error;
-                if (dict[@"errorcode"] && [dict[@"errorcode"] isEqualToString:@"invalid customer token."]) {
-                    result = FFNetWorkingResponseStatusTokenInvalid;
+                NSDictionary *requestDic = (NSDictionary *)error;
+                if (![requestDic[@"result"] isEqualToString:@"1"]) {
+                    NSString *errcode = [self isBlankString:requestDic[@"errorcode"]] ? @"" : requestDic[@"errorcode"];
+                    NSString *errMsg = requestDic[@"data"][@"errmsg"];
+                    if (errcode.length > 0 && ([errMsg isEqualToString:@"invalid customer token."])) {
+                        result = FFNetWorkingResponseStatusTokenInvalid;
+                        
+                        return result;
+                    } else {
+                        result = FFNetWorkingResponseStatusError;
+                    }
                 }
+                
             } else if ([error isKindOfClass:[NSString class]]) {
                 NSString *errorCode =(NSString*)error;
                 if (errorCode && [errorCode isEqualToString:@"invalid customer token."]) {
@@ -85,10 +94,16 @@
     
     if (requestStr) {
         NSDictionary *requestDic = [self dictionaryWithJsonString:requestStr];
-        if (requestDic[@"result"] && ([requestDic[@"errorcode"] isEqualToString:@"invalid customer token."])) {
-            result = FFNetWorkingResponseStatusTokenInvalid;
-            
-            return result;
+        if (![requestDic[@"result"] isEqualToString:@"1"]) {
+            NSString *errcode = [self isBlankString:requestDic[@"errorcode"]] ? @"" : requestDic[@"errorcode"];
+            NSString *errMsg = requestDic[@"data"][@"errmsg"];
+            if (errcode.length > 0 && ([errMsg isEqualToString:@"invalid customer token."])) {
+                result = FFNetWorkingResponseStatusTokenInvalid;
+                
+                return result;
+            } else {
+                result = FFNetWorkingResponseStatusError;
+            }
         }
     }
     
@@ -139,5 +154,25 @@
             [value isKindOfClass:[NSDictionary class]]);
 }
 
+- (BOOL)isBlankString:(NSString *)string {
+    if (string == nil || string == NULL) {
+        return YES;
+    }
+    
+    if ([string isKindOfClass:[NSNull class]]) {
+        return YES;
+    }
+    
+    //去掉前后空格,判断length是否为空
+    if ([[string stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]] length] == 0) {
+        return YES;
+    }
+    
+    if ([string isEqualToString:@"(null)"] || [string isEqualToString:@"null"] || [string isEqualToString:@"<null>"]) {
+        return YES;
+    }
+    
+    return NO;
+}
 
 @end
