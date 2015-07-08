@@ -58,19 +58,29 @@ static NSTimeInterval kAIFNetworkingTimeoutSeconds = 20.0f;
 
 - (NSURLRequest *)generateGETRequestWithServiceIdentifier:(NSString *)serviceIdentifier requestParams:(NSDictionary *)requestParams methodName:(NSString *)methodName{
     FFNetService *service = [[FFNetServiceFactory shareInstance] serviceWithIdentifier:serviceIdentifier];
+    
+    NSString *paramsString;
+    if (requestParams) {
+        paramsString = [requestParams FFNet_urlParamsStringSignature:NO];
+    }
+    
+    NSString *signature = @"";
+    NSString *baseUrlStr = [NSString stringWithFormat:@"%@%@/%@?%@",service.apiBaseUrl, service.apiVersion, methodName, paramsString];
+    
+    NSMutableDictionary *publicParams = [NSMutableDictionary dictionaryWithDictionary:[FFNetCommonParamsGenerator commonParamsDictionary]];
+    [publicParams setObject:service.publicKey forKey:@"api_key"];
+    [publicParams setObject:signature forKey:@"sig"];
 
-    NSMutableDictionary *sigParams = [NSMutableDictionary dictionaryWithDictionary:requestParams];
-//    sigParams[@"api_key"] = service.publicKey;
-    NSString *signature = [FFSignatureGenerator signGetWithSigParams:sigParams methodName:methodName apiVersion:service.apiVersion privateKey:service.privateKey publicKey:service.publicKey];
-
-    NSMutableDictionary *allParams = [NSMutableDictionary dictionaryWithDictionary:[FFNetCommonParamsGenerator commonParamsDictionary]];
-    [allParams addEntriesFromDictionary:sigParams];
-//    NSString *urlString = [NSString stringWithFormat:@"%@%@/%@?%@&sig=%@", service.apiBaseUrl, service.apiVersion, methodName, [allParams FFNet_urlParamsStringSignature:NO], signature];
-    NSString *urlString = [NSString stringWithFormat:@"%@/%@?%@&sig=%@", service.apiBaseUrl, methodName, [allParams FFNet_urlParamsStringSignature:NO], signature];
-
-    NSMutableURLRequest *request = [self.httpRequestSerializer requestWithMethod:@"GET" URLString:urlString parameters:nil error:NULL];
-    request.timeoutInterval = 20;
+    NSMutableURLRequest *request = [self.httpRequestSerializer requestWithMethod:@"GET" URLString:baseUrlStr parameters:nil error:NULL];
     request.requestParams = requestParams;
+    request.timeoutInterval = 20;
+
+    for (NSString *key in publicParams) {
+        NSString *headerStr = publicParams[key];
+        if (headerStr && headerStr.length > 0) {
+            [request setValue:headerStr ? headerStr : @"" forHTTPHeaderField:key];
+        }
+    }
     
     [FFNetDebug logDebugInfoWithRequest:request apiName:methodName service:service requestParams:requestParams httpMethod:@"GET"];
     return request;
@@ -79,7 +89,6 @@ static NSTimeInterval kAIFNetworkingTimeoutSeconds = 20.0f;
 - (NSURLRequest *)generatePostRequestWithServiceIdentifier:(NSString *)serviceIdentifier requestParams:(NSDictionary *)requestParams methodName:(NSString *)methodName{
     FFNetService *service = [[FFNetServiceFactory shareInstance] serviceWithIdentifier:serviceIdentifier];
     
-//    NSString *signature = [FFSignatureGenerator signPostWithApiParams:requestParams privateKey:service.privateKey publicKey:service.publicKey];
     NSString *signature = @"";
     NSString *baseUrlStr = [NSString stringWithFormat:@"%@%@/%@",service.apiBaseUrl, service.apiVersion, methodName];
     
