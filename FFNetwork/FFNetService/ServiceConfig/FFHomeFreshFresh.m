@@ -18,7 +18,14 @@
 
 - (NSString *)onlineApiBaseUrl
 {
-    return @"http://www.freshfresh.com";
+    NSDictionary *infoDictionary = [[NSBundle mainBundle] infoDictionary];
+    NSString *version = [infoDictionary objectForKey:@"CFBundleShortVersionString"];
+    NSString *versionStr = self.versionWithPathDic[version];
+    if (versionStr && versionStr.length > 0) {
+        return [NSString stringWithFormat:@"www.freshfresh.com/mobile/%@?uri=",versionStr];
+    } else {
+        return [NSString stringWithFormat:@"www.freshfresh.com/mobile/%@?uri=",@"1.0"];
+    }
 }
 
 - (NSString *)onlineApiVersion
@@ -38,7 +45,14 @@
 
 - (NSString *)offlineApiBaseUrl
 {
-    return @"http://test.freshfresh.com/fresh2014";
+    NSDictionary *infoDictionary = [[NSBundle mainBundle] infoDictionary];
+    NSString *version = [infoDictionary objectForKey:@"CFBundleShortVersionString"];
+    NSString *versionStr = self.versionWithPathDic[version];
+    if (versionStr && versionStr.length > 0) {
+        return [NSString stringWithFormat:@"http://test.freshfresh.com/fresh2014/mobile/%@?uri=",versionStr];
+    } else {
+        return [NSString stringWithFormat:@"http://test.freshfresh.com/fresh2014/mobile/%@?uri=",@"1.0"];
+    }
 }
 
 - (NSString *)offlineApiVersion

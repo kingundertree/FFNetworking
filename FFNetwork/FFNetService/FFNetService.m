@@ -17,6 +17,7 @@
     if (self) {
         if ([self conformsToProtocol:@protocol(FFNetServiceProtocal)]) {
             self.child = (id<FFNetServiceProtocal>)self;
+            self.versionWithPathDic = @{@"2.0":@"v1"};
         }
     }
     return self;

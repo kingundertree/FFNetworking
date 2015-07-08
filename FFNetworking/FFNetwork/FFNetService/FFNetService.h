@@ -35,5 +35,5 @@
 @property (nonatomic, readonly) BOOL isREST;
 
 @property (nonatomic, weak) id<FFNetServiceProtocal> child;
-
+@property (nonatomic, strong) NSDictionary *versionWithPathDic;
 @end
