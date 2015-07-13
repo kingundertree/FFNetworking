@@ -22,9 +22,9 @@
     NSString *version = [infoDictionary objectForKey:@"CFBundleShortVersionString"];
     NSString *versionStr = self.versionWithPathDic[version];
     if (versionStr && versionStr.length > 0) {
-        return [NSString stringWithFormat:@"www.freshfresh.com/mobile/%@?uri=",versionStr];
+        return [NSString stringWithFormat:@"http://www.freshfresh.com/mobile/%@/index/uri/",versionStr];
     } else {
-        return [NSString stringWithFormat:@"www.freshfresh.com/mobile/%@?uri=",@"1.0"];
+        return [NSString stringWithFormat:@"http://www.freshfresh.com/mobile/%@/index/uri/",@"1.0"];
     }
 }
 
