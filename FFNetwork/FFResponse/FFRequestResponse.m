@@ -101,8 +101,6 @@
                 result = FFNetWorkingResponseStatusTokenInvalid;
                 
                 return result;
-            } else {
-                result = FFNetWorkingResponseStatusError;
             }
         }
     }
