@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		AEB84334D2000FE99CC050C6 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ECC9ACFB01249F8227AB52D9 /* libPods.a */; };
+		F801FBB21B68A4D700E21EF4 /* FFFlashBuyService.m in Sources */ = {isa = PBXBuildFile; fileRef = F801FBB11B68A4D700E21EF4 /* FFFlashBuyService.m */; };
 		F89940641B0DE015005C2765 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F89940621B0DE015005C2765 /* Main.storyboard */; };
 		F89940661B0DE015005C2765 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F89940651B0DE015005C2765 /* Images.xcassets */; };
 		F89940691B0DE015005C2765 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = F89940671B0DE015005C2765 /* LaunchScreen.xib */; };
@@ -55,6 +56,8 @@
 		D7B7A3324AB4AF4B638EAD80 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		ECC9ACFB01249F8227AB52D9 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		F34A822CEFD5087F203C0DFB /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		F801FBB01B68A4D700E21EF4 /* FFFlashBuyService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFFlashBuyService.h; sourceTree = "<group>"; };
+		F801FBB11B68A4D700E21EF4 /* FFFlashBuyService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFFlashBuyService.m; sourceTree = "<group>"; };
 		F89940551B0DE015005C2765 /* FFNetworking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FFNetworking.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F89940631B0DE015005C2765 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F89940651B0DE015005C2765 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -311,6 +314,8 @@
 			children = (
 				F8B2B6D61B68A20C00A73BB2 /* FFHomeFreshFresh.h */,
 				F8B2B6D71B68A20C00A73BB2 /* FFHomeFreshFresh.m */,
+				F801FBB01B68A4D700E21EF4 /* FFFlashBuyService.h */,
+				F801FBB11B68A4D700E21EF4 /* FFFlashBuyService.m */,
 			);
 			path = ServiceConfig;
 			sourceTree = "<group>";
@@ -476,6 +481,7 @@
 				F8B2B6EC1B68A20C00A73BB2 /* NSString+FFNetMethod.m in Sources */,
 				F8CC37431B0F3D1A009DA9EE /* ViewController.m in Sources */,
 				F8B2B6F71B68A20C00A73BB2 /* FFRequestManager.m in Sources */,
+				F801FBB21B68A4D700E21EF4 /* FFFlashBuyService.m in Sources */,
 				F8B2B6F21B68A20C00A73BB2 /* FFApiManager.m in Sources */,
 				F8B2B6E31B68A20C00A73BB2 /* FFDeviceInfo.m in Sources */,
 				F8B2B6EA1B68A20C00A73BB2 /* NSMutableString+FFNetMethod.m in Sources */,

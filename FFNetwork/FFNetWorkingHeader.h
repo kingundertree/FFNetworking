@@ -16,4 +16,8 @@
 #define FFNetworkingRestfulPostServiceIDForFreshFresh @"RestfulPostServiceIDForFreshFresh"
 
 
+#define FFNetworkingGetServiceIDForFlashBuy @"GetServiceIDForFlashBuy"
+#define FFNetworkingPostServiceIDForFlashBuy @"PostServiceIDForFlashBuy"
+
+
 #endif
