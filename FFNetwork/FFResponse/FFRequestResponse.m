@@ -92,18 +92,18 @@
 - (enum FFNetWorkingResponseStatus)responseStatusWithRequestString:(NSString *)requestStr {
     enum FFNetWorkingResponseStatus result = FFNetWorkingResponseStatusSuccess;
     
-    if (requestStr) {
-        NSDictionary *requestDic = [self dictionaryWithJsonString:requestStr];
-        if (![requestDic[@"result"] isEqualToString:@"1"]) {
-            NSString *errcode = [self isBlankString:requestDic[@"errorcode"]] ? @"" : requestDic[@"errorcode"];
-            NSString *errMsg = requestDic[@"data"][@"errmsg"];
-            if (errcode.length > 0 && ([errMsg isEqualToString:@"invalid customer token."])) {
-                result = FFNetWorkingResponseStatusTokenInvalid;
-                
-                return result;
-            }
-        }
-    }
+//    if (requestStr) {
+//        NSDictionary *requestDic = [self dictionaryWithJsonString:requestStr];
+//        if (![requestDic[@"result"] isEqualToString:@"1"]) {
+//            NSString *errcode = [self isBlankString:requestDic[@"errorcode"]] ? @"" : requestDic[@"errorcode"];
+//            NSString *errMsg = requestDic[@"data"][@"errmsg"];
+//            if (errcode.length > 0 && ([errMsg isEqualToString:@"invalid customer token."])) {
+//                result = FFNetWorkingResponseStatusTokenInvalid;
+//                
+//                return result;
+//            }
+//        }
+//    }
     
     return result;
 }
