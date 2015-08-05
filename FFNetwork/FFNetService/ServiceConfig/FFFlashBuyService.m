@@ -18,7 +18,7 @@
 
 - (NSString *)onlineApiBaseUrl
 {
-    return @"http://wx.freshfresh.com";
+    return @"http://wx.freshfresh.com/";
 }
 
 - (NSString *)onlineApiVersion
