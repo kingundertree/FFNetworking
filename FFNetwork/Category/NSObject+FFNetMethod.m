@@ -29,9 +29,9 @@
         NSRange range2 = [fullString rangeOfString:@"(null)"];
         NSRange range3 = [fullString rangeOfString:@"null"];
         
-        NSString *returnString;
+        NSString *returnString = [fullString copy];
         if (range1.length > 0) {
-            returnString = [fullString stringByReplacingOccurrencesOfString:@"<null>" withString:@""];
+            returnString = [returnString stringByReplacingOccurrencesOfString:@"<null>" withString:@""];
         }
         
         if (range2.length > 0) {
