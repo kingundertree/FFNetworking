@@ -62,19 +62,18 @@
             result = FFNetWorkingResponseStatusTimeOut;
         } else {
             if ([error isKindOfClass:[NSDictionary class]]) {
+                result = FFNetWorkingResponseStatusError;
                 NSDictionary *requestDic = (NSDictionary *)error;
-                if (![requestDic[@"result"] isEqualToString:@"1"]) {
-                    NSString *errcode = [self isBlankString:requestDic[@"errorcode"]] ? @"" : requestDic[@"errorcode"];
-                    NSString *errMsg = requestDic[@"data"][@"errmsg"];
-                    if (errcode.length > 0 && ([errMsg isEqualToString:@"invalid customer token."])) {
-                        result = FFNetWorkingResponseStatusTokenInvalid;
-                        
-                        return result;
-                    } else {
-                        result = FFNetWorkingResponseStatusError;
+                if (![requestDic[@"result"] isEqualToString:@"0"]) {
+                    if (requestDic[@"data"]) {
+                        NSString *errMsg = requestDic[@"data"][@"errmsg"];
+                        if (errMsg && errMsg.length > 0 && [errMsg isEqualToString:@"invalid customer token."]) {
+                            result = FFNetWorkingResponseStatusTokenInvalid;
+                            
+                            return result;
+                        }
                     }
                 }
-                
             } else if ([error isKindOfClass:[NSString class]]) {
                 NSString *errorCode =(NSString*)error;
                 if (errorCode && [errorCode isEqualToString:@"invalid customer token."]) {
@@ -92,18 +91,19 @@
 - (enum FFNetWorkingResponseStatus)responseStatusWithRequestString:(NSString *)requestStr {
     enum FFNetWorkingResponseStatus result = FFNetWorkingResponseStatusSuccess;
     
-//    if (requestStr) {
-//        NSDictionary *requestDic = [self dictionaryWithJsonString:requestStr];
-//        if (![requestDic[@"result"] isEqualToString:@"1"]) {
-//            NSString *errcode = [self isBlankString:requestDic[@"errorcode"]] ? @"" : requestDic[@"errorcode"];
-//            NSString *errMsg = requestDic[@"data"][@"errmsg"];
-//            if (errcode.length > 0 && ([errMsg isEqualToString:@"invalid customer token."])) {
-//                result = FFNetWorkingResponseStatusTokenInvalid;
-//                
-//                return result;
-//            }
-//        }
-//    }
+    if (requestStr) {
+        NSDictionary *requestDic = [self dictionaryWithJsonString:requestStr];
+        if (![requestDic[@"result"] isEqualToString:@"0"]) {
+            if (requestDic[@"data"]) {
+                NSString *errMsg = requestDic[@"data"][@"errmsg"];
+                if (errMsg && errMsg.length > 0 && [errMsg isEqualToString:@"invalid customer token."]) {
+                    result = FFNetWorkingResponseStatusTokenInvalid;
+                    
+                    return result;
+                }
+            }
+        }
+    }
     
     return result;
 }
