@@ -20,8 +20,23 @@
         return defaultData;
     }
     
-    return self;
+    
+    
+    return [NSObject replaceAllCurrentString:defaultData];
 }
+
++ (NSString *)replaceAllCurrentString:(NSString *)fullString {
+    if ([fullString isKindOfClass:[NSString class]]) {
+        NSString *returnString = [fullString stringByReplacingOccurrencesOfString:@"<null>" withString:@""];
+        returnString = [returnString stringByReplacingOccurrencesOfString:@"(null)" withString:@""];
+        returnString = [returnString stringByReplacingOccurrencesOfString:@"null" withString:@""];
+        
+        return returnString;
+    }
+    
+    return @"";
+}
+
 
 - (BOOL)FFNet_isEmptyObject
 {
