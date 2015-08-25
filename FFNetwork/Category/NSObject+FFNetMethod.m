@@ -35,15 +35,15 @@
         
         NSString *returnString = [fullString copy];
         if (range1.length > 0) {
-            returnString = [returnString stringByReplacingOccurrencesOfString:@"<null>" withString:@""];
+            returnString = [returnString stringByReplacingOccurrencesOfString:@"<null>" withString:@"\"\""];
         }
         
         if (range2.length > 0) {
-            returnString = [returnString stringByReplacingOccurrencesOfString:@"(null)" withString:@""];
+            returnString = [returnString stringByReplacingOccurrencesOfString:@"(null)" withString:@"\"\""];
         }
 
         if (range3.length > 0) {
-            returnString = [returnString stringByReplacingOccurrencesOfString:@"null" withString:@""];
+            returnString = [returnString stringByReplacingOccurrencesOfString:@"null" withString:@"\"\""];
         }
         
         return returnString;

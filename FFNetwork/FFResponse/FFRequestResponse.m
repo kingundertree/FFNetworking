@@ -23,9 +23,8 @@
 {
     self = [super init];
     if (self) {
-        NSString *formatString = [self replaceAllCurrentString:responseString];
-        self.contentString = formatString;
-        self.status = [self responseStatusWithRequestString:formatString];
+        self.contentString = [responseString FFNet_defaultValue:@""];
+        self.status = [self responseStatusWithRequestString:responseString];
         self.requestId = [requestId integerValue];
         self.request = request;
         self.responseData = responseData;
@@ -40,8 +39,7 @@
 {
     self = [super init];
     if (self) {
-        NSString *formatString = [self replaceAllCurrentString:responseString];
-        self.contentString = formatString;
+        self.contentString = [responseString FFNet_defaultValue:@""];
         self.status = [self responseStatusWithError:error];
         self.requestId = [requestId integerValue];
         self.request = request;
@@ -146,16 +144,10 @@
     if (![self checkMutableContainer:content]) {
         content = nil;
     } else {
-        NSString *formatString;
-        if ([content isKindOfClass:[NSArray class]]) {
-            NSString *originString = [NSString jsonStringWithArray:content];
-            formatString = [self replaceAllCurrentString:originString];
-        } else if ([content isKindOfClass:[NSDictionary class]]) {
-            NSString *originString = [NSString jsonStringWithDictionary:content];
-            formatString = [self replaceAllCurrentString:originString];
-        }
+        NSString *originString = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+        NSString *formatString = [self replaceAllCurrentString:originString];
         
-        NSData* data = [formatString dataUsingEncoding:NSUTF8StringEncoding];
+        NSData *data = [formatString dataUsingEncoding:NSUTF8StringEncoding];
         __autoreleasing NSError* error = nil;
         id result = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
         if (error != nil) {
