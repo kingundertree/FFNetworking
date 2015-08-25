@@ -11,4 +11,9 @@
 @interface NSString (FFNetMethod)
 - (NSString *)STR_md5;
 
++ (NSString *) jsonStringWithArray:(NSArray *)array;
++ (NSString *) jsonStringWithDictionary:(NSDictionary *)dictionary;
++ (NSString *) jsonStringWithObject:(id) object;
++ (NSDictionary *)dictionaryWithJsonString:(NSString *)jsonString;
++ (NSString *) jsonStringWithString:(NSString *) string;
 @end

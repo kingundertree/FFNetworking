@@ -12,4 +12,5 @@
 - (id)FFNet_defaultValue:(id)defaultData;
 - (BOOL)FFNet_isEmptyObject;
 
+- (NSString *)replaceAllCurrentString:(NSString *)fullString;
 @end

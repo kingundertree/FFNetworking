@@ -9,6 +9,7 @@
 #import "FFRequestResponse.h"
 #import "NSObject+FFNetMethod.h"
 #import "NSURLRequest+FFNetMethod.h"
+#import "NSString+FFNetMethod.h"
 
 @interface FFRequestResponse ()
 @property (nonatomic, copy, readwrite) NSURLRequest *request;
@@ -22,8 +23,9 @@
 {
     self = [super init];
     if (self) {
-        self.contentString = [responseString FFNet_defaultValue:@""];
-        self.status = [self responseStatusWithRequestString:responseString];
+        NSString *formatString = [self replaceAllCurrentString:responseString];
+        self.contentString = formatString;
+        self.status = [self responseStatusWithRequestString:formatString];
         self.requestId = [requestId integerValue];
         self.request = request;
         self.responseData = responseData;
@@ -38,7 +40,8 @@
 {
     self = [super init];
     if (self) {
-        self.contentString = [responseString FFNet_defaultValue:@""];
+        NSString *formatString = [self replaceAllCurrentString:responseString];
+        self.contentString = formatString;
         self.status = [self responseStatusWithError:error];
         self.requestId = [requestId integerValue];
         self.request = request;
@@ -139,12 +142,33 @@
 - (id)createContentWithData:(NSData *)data
 {
     id content = data ? [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil] : nil;
+    
     if (![self checkMutableContainer:content]) {
         content = nil;
+    } else {
+        NSString *formatString;
+        if ([content isKindOfClass:[NSArray class]]) {
+            NSString *originString = [NSString jsonStringWithArray:content];
+            formatString = [self replaceAllCurrentString:originString];
+        } else if ([content isKindOfClass:[NSDictionary class]]) {
+            NSString *originString = [NSString jsonStringWithDictionary:content];
+            formatString = [self replaceAllCurrentString:originString];
+        }
+        
+        NSData* data = [formatString dataUsingEncoding:NSUTF8StringEncoding];
+        __autoreleasing NSError* error = nil;
+        id result = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
+        if (error != nil) {
+            NSLog(@"json解析失败");
+            return nil;
+        };
+        
+        return result;
     }
     
     return content;
 }
+
 
 - (BOOL)checkMutableContainer:(id)value
 {
@@ -172,5 +196,7 @@
     
     return NO;
 }
+
+
 
 @end

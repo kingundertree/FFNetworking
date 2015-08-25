@@ -20,10 +20,14 @@
         return defaultData;
     }
     
-    return [NSObject replaceAllCurrentString:defaultData];
+    return self;
 }
 
-+ (NSString *)replaceAllCurrentString:(NSString *)fullString {
+- (NSString *)replaceAllCurrentString:(NSString *)fullString {
+    if ([fullString FFNet_isEmptyObject]) {
+        return @"";
+    }
+
     if ([fullString isKindOfClass:[NSString class]]) {
         NSRange range1 = [fullString rangeOfString:@"<null>"];
         NSRange range2 = [fullString rangeOfString:@"(null)"];
