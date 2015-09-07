@@ -10,6 +10,7 @@
 #import "FFNetWorkingHeader.h"
 #import "FFHomeFreshFresh.h"
 #import "FFFlashBuyService.h"
+#import "FFFresh2014HomeService.h"
 
 @interface FFNetServiceFactory ()
 @property(nonatomic, strong) NSMutableDictionary *serviceStorage;
@@ -46,6 +47,8 @@
     if ([identify isEqualToString:FFNetworkingGetServiceIDForFreshFresh] || [identify isEqualToString:FFNetworkingPostServiceIDForFreshFresh]) {
         return [[FFHomeFreshFresh alloc] init];
     } else if ([identify isEqualToString:FFNetworkingGetServiceIDForFlashBuy] || [identify isEqualToString:FFNetworkingPostServiceIDForFlashBuy]) {
+        return [[FFFlashBuyService alloc] init];
+    } else if ([identify isEqualToString:FFNetworkingGetServiceIDForFresh2014] || [identify isEqualToString:FFNetworkingPostServiceIDForFresh2014]) {
         return [[FFFlashBuyService alloc] init];
     }
 
