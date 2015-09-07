@@ -40,6 +40,7 @@
 		F8CC373D1B0F3D07009DA9EE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F8CC373B1B0F3D07009DA9EE /* main.m */; };
 		F8CC37421B0F3D1A009DA9EE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F8CC373F1B0F3D1A009DA9EE /* AppDelegate.m */; };
 		F8CC37431B0F3D1A009DA9EE /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8CC37411B0F3D1A009DA9EE /* ViewController.m */; };
+		F8F2B6401B9D3CD0007DC538 /* FFFresh2014HomeService.m in Sources */ = {isa = PBXBuildFile; fileRef = F8F2B63F1B9D3CD0007DC538 /* FFFresh2014HomeService.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -118,6 +119,8 @@
 		F8CC373F1B0F3D1A009DA9EE /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = view/AppDelegate.m; sourceTree = "<group>"; };
 		F8CC37401B0F3D1A009DA9EE /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ViewController.h; path = view/ViewController.h; sourceTree = "<group>"; };
 		F8CC37411B0F3D1A009DA9EE /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ViewController.m; path = view/ViewController.m; sourceTree = "<group>"; };
+		F8F2B63E1B9D3CD0007DC538 /* FFFresh2014HomeService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFFresh2014HomeService.h; sourceTree = "<group>"; };
+		F8F2B63F1B9D3CD0007DC538 /* FFFresh2014HomeService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFFresh2014HomeService.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -316,6 +319,8 @@
 				F8B2B6D71B68A20C00A73BB2 /* FFHomeFreshFresh.m */,
 				F801FBB01B68A4D700E21EF4 /* FFFlashBuyService.h */,
 				F801FBB11B68A4D700E21EF4 /* FFFlashBuyService.m */,
+				F8F2B63E1B9D3CD0007DC538 /* FFFresh2014HomeService.h */,
+				F8F2B63F1B9D3CD0007DC538 /* FFFresh2014HomeService.m */,
 			);
 			path = ServiceConfig;
 			sourceTree = "<group>";
@@ -478,6 +483,7 @@
 				F8B2B6F01B68A20C00A73BB2 /* FFAppContext.m in Sources */,
 				F8B2B6F91B68A20C00A73BB2 /* FFSignatureGenerator.m in Sources */,
 				F8B2B6EE1B68A20C00A73BB2 /* NSURLRequest+FFNetMethod.m in Sources */,
+				F8F2B6401B9D3CD0007DC538 /* FFFresh2014HomeService.m in Sources */,
 				F8B2B6EC1B68A20C00A73BB2 /* NSString+FFNetMethod.m in Sources */,
 				F8CC37431B0F3D1A009DA9EE /* ViewController.m in Sources */,
 				F8B2B6F71B68A20C00A73BB2 /* FFRequestManager.m in Sources */,
