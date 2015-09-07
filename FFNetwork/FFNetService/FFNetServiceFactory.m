@@ -49,7 +49,7 @@
     } else if ([identify isEqualToString:FFNetworkingGetServiceIDForFlashBuy] || [identify isEqualToString:FFNetworkingPostServiceIDForFlashBuy]) {
         return [[FFFlashBuyService alloc] init];
     } else if ([identify isEqualToString:FFNetworkingGetServiceIDForFresh2014] || [identify isEqualToString:FFNetworkingPostServiceIDForFresh2014]) {
-        return [[FFFlashBuyService alloc] init];
+        return [[FFFresh2014HomeService alloc] init];
     }
 
     return nil;
