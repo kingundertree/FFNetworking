@@ -66,7 +66,12 @@ static NSTimeInterval kAIFNetworkingTimeoutSeconds = 20.0f;
     [publicParams setObject:service.publicKey forKey:@"api_key"];
     [publicParams setObject:signature forKey:@"sig"];
     
-    NSString *fullUrl = [NSString stringWithFormat:@"%@?%@",baseUrlStr,[requestParams FFNet_urlParamsStringSignature:NO]];
+    NSString *fullUrl;
+    if ([requestParams allKeys].count > 0) {
+        fullUrl = [NSString stringWithFormat:@"%@?%@",baseUrlStr,[requestParams FFNet_urlParamsStringSignature:NO]];
+    } else {
+        fullUrl = [NSString stringWithFormat:@"%@",baseUrlStr];
+    }
     NSMutableURLRequest *request = [self.httpRequestSerializer requestWithMethod:@"GET" URLString:fullUrl parameters:nil error:NULL];
     request.requestParams = requestParams;
     request.timeoutInterval = 20;
