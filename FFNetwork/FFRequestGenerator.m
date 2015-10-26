@@ -50,7 +50,7 @@ static NSTimeInterval kAIFNetworkingTimeoutSeconds = 20.0f;
 - (AFHTTPRequestSerializer *)httpRequestSerializer{
     if (_httpRequestSerializer == nil) {
         _httpRequestSerializer = [AFHTTPRequestSerializer serializer];
-        _httpRequestSerializer.timeoutInterval = 20;
+        _httpRequestSerializer.timeoutInterval = 10;
         _httpRequestSerializer.cachePolicy = NSURLRequestUseProtocolCachePolicy;
     }
     return _httpRequestSerializer;
@@ -74,7 +74,7 @@ static NSTimeInterval kAIFNetworkingTimeoutSeconds = 20.0f;
     }
     NSMutableURLRequest *request = [self.httpRequestSerializer requestWithMethod:@"GET" URLString:fullUrl parameters:nil error:NULL];
     request.requestParams = requestParams;
-    request.timeoutInterval = 20;
+    request.timeoutInterval = 10;
     
     for (NSString *key in publicParams) {
         NSString *headerStr = publicParams[key];
