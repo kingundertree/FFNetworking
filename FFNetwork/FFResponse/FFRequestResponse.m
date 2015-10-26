@@ -61,6 +61,7 @@
         // 除了超时以外，所有错误都当成是无网络
         if (error.code == NSURLErrorTimedOut) {
             result = FFNetWorkingResponseStatusTimeOut;
+            NSLog(@"请求超时，cancle 此请求");
         } else {
             if ([error isKindOfClass:[NSDictionary class]]) {
                 result = FFNetWorkingResponseStatusError;

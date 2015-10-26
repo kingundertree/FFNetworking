@@ -26,7 +26,7 @@ static NSString * const httpMethodRestfulPost = @"POST";
 static NSString * const httpMethodRestfulPut = @"PUT";
 static NSString * const httpMethodRestfulDelete = @"DELETE";
 
-static NSTimeInterval kAIFNetworkingTimeoutSeconds = 20.0f;
+static NSTimeInterval kAIFNetworkingTimeoutSeconds = 10.0f;
 
 @interface FFRequestGenerator ()
 @property(nonatomic, strong) AFHTTPRequestSerializer *httpRequestSerializer;
@@ -50,7 +50,7 @@ static NSTimeInterval kAIFNetworkingTimeoutSeconds = 20.0f;
 - (AFHTTPRequestSerializer *)httpRequestSerializer{
     if (_httpRequestSerializer == nil) {
         _httpRequestSerializer = [AFHTTPRequestSerializer serializer];
-        _httpRequestSerializer.timeoutInterval = 10;
+        _httpRequestSerializer.timeoutInterval = 5;
         _httpRequestSerializer.cachePolicy = NSURLRequestUseProtocolCachePolicy;
     }
     return _httpRequestSerializer;
@@ -74,7 +74,7 @@ static NSTimeInterval kAIFNetworkingTimeoutSeconds = 20.0f;
     }
     NSMutableURLRequest *request = [self.httpRequestSerializer requestWithMethod:@"GET" URLString:fullUrl parameters:nil error:NULL];
     request.requestParams = requestParams;
-    request.timeoutInterval = 10;
+    request.timeoutInterval = 5;
     
     for (NSString *key in publicParams) {
         NSString *headerStr = publicParams[key];
