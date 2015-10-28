@@ -69,7 +69,7 @@
                 NSString *resultStr = [NSString stringWithFormat:@"%@",requestDic[@"result"]];
                 if ([resultStr isEqualToString:@"0"]) {
                     if (requestDic[@"data"]) {
-                        if (requestDic[@"data"][@"errmsg"]) {
+                        if ([requestDic[@"data"] isKindOfClass:[NSDictionary class]] && requestDic[@"data"][@"errmsg"]) {
                             NSString *errMsg = requestDic[@"data"][@"errmsg"];
                             if (errMsg && errMsg.length > 0 && [errMsg isEqualToString:@"invalid customer token."]) {
                                 result = FFNetWorkingResponseStatusTokenInvalid;
@@ -101,7 +101,7 @@
         NSString *resultStr = [NSString stringWithFormat:@"%@",requestDic[@"result"]];
         if ([resultStr isEqualToString:@"0"]) {
             if (requestDic[@"data"]) {
-                if (requestDic[@"data"][@"errmsg"]) {
+                if ([requestDic[@"data"] isKindOfClass:[NSDictionary class]] && requestDic[@"data"][@"errmsg"]) {
                     NSString *errMsg = requestDic[@"data"][@"errmsg"];
                     if (errMsg && errMsg.length > 0 && [errMsg isEqualToString:@"invalid customer token."]) {
                         result = FFNetWorkingResponseStatusTokenInvalid;
