@@ -23,5 +23,7 @@
 #define FFNetworkingGetServiceIDForFresh2014 @"GetServiceIDForFresh2014"
 #define FFNetworkingPostServiceIDForFresh2014 @"PostServiceIDForFresh2014"
 
+#define FFFreshFreshKey @"ehgrvh3277adhhjf"
+
 
 #endif

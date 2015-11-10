@@ -20,6 +20,7 @@
 #import "NSURLRequest+FFNetMethod.h"
 #import "FFNetServiceFactory.h"
 #import "FFNetDebug.h"
+#import "FFHomeFreshFresh.h"
 
 static NSString * const httpMethodRestfulGet = @"GET";
 static NSString * const httpMethodRestfulPost = @"POST";
@@ -50,7 +51,7 @@ static NSTimeInterval kAIFNetworkingTimeoutSeconds = 10.0f;
 - (AFHTTPRequestSerializer *)httpRequestSerializer{
     if (_httpRequestSerializer == nil) {
         _httpRequestSerializer = [AFHTTPRequestSerializer serializer];
-        _httpRequestSerializer.timeoutInterval = 5;
+        _httpRequestSerializer.timeoutInterval = kAIFNetworkingTimeoutSeconds;
         _httpRequestSerializer.cachePolicy = NSURLRequestUseProtocolCachePolicy;
     }
     return _httpRequestSerializer;
@@ -59,22 +60,27 @@ static NSTimeInterval kAIFNetworkingTimeoutSeconds = 10.0f;
 - (NSURLRequest *)generateGETRequestWithServiceIdentifier:(NSString *)serviceIdentifier requestParams:(NSDictionary *)requestParams methodName:(NSString *)methodName{
     FFNetService *service = [[FFNetServiceFactory shareInstance] serviceWithIdentifier:serviceIdentifier];
     
-    NSString *signature = @"";
+//    NSString *signature = @"";
     NSString *baseUrlStr = [NSString stringWithFormat:@"%@%@%@",service.apiBaseUrl, service.apiVersion, methodName];
     
     NSMutableDictionary *publicParams = [NSMutableDictionary dictionaryWithDictionary:[FFNetCommonParamsGenerator commonParamsDictionary]];
-    [publicParams setObject:service.publicKey forKey:@"api_key"];
-    [publicParams setObject:signature forKey:@"sig"];
+//    [publicParams setObject:service.publicKey forKey:@"api_key"];
+//    [publicParams setObject:signature forKey:@"sig"];
     
     NSString *fullUrl;
     if ([requestParams allKeys].count > 0) {
-        fullUrl = [NSString stringWithFormat:@"%@?%@",baseUrlStr,[requestParams FFNet_urlParamsStringSignature:NO]];
+        if ([service isKindOfClass:[FFHomeFreshFresh Class]]) {
+            // v2版本 需要单独处理参数
+            fullUrl = [NSString stringWithFormat:@"%@?%@",baseUrlStr,[requestParams FFNet_urlParamsStringSignature:NO]];
+        } else {
+            fullUrl = [NSString stringWithFormat:@"%@?%@",baseUrlStr,[requestParams FFNet_urlParamsString:NO]];
+        }
     } else {
         fullUrl = [NSString stringWithFormat:@"%@",baseUrlStr];
     }
     NSMutableURLRequest *request = [self.httpRequestSerializer requestWithMethod:@"GET" URLString:fullUrl parameters:nil error:NULL];
-    request.requestParams = requestParams;
-    request.timeoutInterval = 5;
+//    request.requestParams = requestParams;
+    request.timeoutInterval = kAIFNetworkingTimeoutSeconds;
     
     for (NSString *key in publicParams) {
         NSString *headerStr = publicParams[key];
@@ -90,15 +96,20 @@ static NSTimeInterval kAIFNetworkingTimeoutSeconds = 10.0f;
 - (NSURLRequest *)generatePostRequestWithServiceIdentifier:(NSString *)serviceIdentifier requestParams:(NSDictionary *)requestParams methodName:(NSString *)methodName{
     FFNetService *service = [[FFNetServiceFactory shareInstance] serviceWithIdentifier:serviceIdentifier];
     
-    NSString *signature = @"";
+//    NSString *signature = @"";
     NSString *baseUrlStr = [NSString stringWithFormat:@"%@%@%@",service.apiBaseUrl, service.apiVersion, methodName];
     
     NSMutableDictionary *publicParams = [NSMutableDictionary dictionaryWithDictionary:[FFNetCommonParamsGenerator commonParamsDictionary]];
-    [publicParams setObject:service.publicKey forKey:@"api_key"];
-    [publicParams setObject:signature forKey:@"sig"];
+//    [publicParams setObject:service.publicKey forKey:@"api_key"];
+//    [publicParams setObject:signature forKey:@"sig"];
     
     NSMutableURLRequest *request = [self.httpRequestSerializer requestWithMethod:@"POST" URLString:baseUrlStr parameters:requestParams error:NULL];
-    request.requestParams = requestParams;
+    if ([service isKindOfClass:[FFHomeFreshFresh class]]) {
+        // v2版本 需要单独处理参数
+        request.requestParams = [requestParams FFNet_urlParamsDicSignature:NO];
+    } else {
+        request.requestParams = requestParams;
+    }
     for (NSString *key in publicParams) {
         NSString *headerStr = publicParams[key];
         if (headerStr && headerStr.length > 0) {

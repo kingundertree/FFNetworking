@@ -8,12 +8,26 @@
 
 #import "NSDictionary+FFNetMethod.h"
 #import "NSArray+FFNetMethod.h"
+#import "GTMBase64.h"
+#import "NSString+MD5Addition.h"
+#import "FFNetWorkingHeader.h"
 
 @implementation NSDictionary (FFNetMethod)
 /** 字符串前面是没有问号的，如果用于POST，那就不用加问号，如果用于GET，就要加个问号 */
-- (NSString *)FFNet_urlParamsStringSignature:(BOOL)isForSignature{
+- (NSString *)FFNet_urlParamsString:(BOOL)isForSignature {
     NSArray *sortedArray = [self FFNet_transformedUrlParamsArraySignature:isForSignature];
     return [sortedArray FFNet_paramsString];
+}
+
+/** 字符串前面是没有问号的，如果用于POST，那就不用加问号，如果用于GET，就要加个问号 */
+- (NSString *)FFNet_urlParamsStringSignature:(BOOL)isForSignature {
+    NSArray *sortedArray = [self FFNet_transformedUrlParamsArraySignature:isForSignature];
+    return [self getCompontKeyStr:sortedArray];
+}
+
+- (NSDictionary *)FFNet_urlParamsDicSignature:(BOOL)isForSignature {
+    NSArray *sortedArray = [self FFNet_transformedUrlParamsArraySignature:isForSignature];
+    return [self getCompontKeyDic:sortedArray];
 }
 
 /** 字典变json */
@@ -38,6 +52,29 @@
     }];
     NSArray *sortedResult = [result sortedArrayUsingSelector:@selector(compare:)];
     return sortedResult;
+}
+
+
+- (NSString *)getCompontKeyStr:(NSArray *)sortedArray {
+    NSString *initParams = [sortedArray FFNet_paramsString];
+    NSString *addKeyStr = [initParams stringByAppendingString:[NSString stringWithFormat:@"%@&key",FFFreshFreshKey]];
+    
+    NSString *performSign = [NSString stringWithFormat:@"%@",[addKeyStr md5]];
+    NSString *upperCaseSine = performSign.uppercaseString;
+    return [NSString stringWithFormat:@"%@&%@",initParams,upperCaseSine];
+}
+
+- (NSDictionary *)getCompontKeyDic:(NSArray *)sortedArray {
+    NSString *initParams = [sortedArray FFNet_paramsString];
+    NSString *addKeyStr = [initParams stringByAppendingString:[NSString stringWithFormat:@"%@&key",FFFreshFreshKey]];
+    
+    NSString *performSign = [NSString stringWithFormat:@"%@",[addKeyStr md5]];
+    NSString *upperCaseSine = performSign.uppercaseString;
+    
+    NSMutableDictionary *mutDic = [[NSMutableDictionary alloc] initWithDictionary:self];
+    [mutDic setObject:upperCaseSine forKey:@"key"];
+    
+    return [NSDictionary dictionaryWithDictionary:mutDic];
 }
 
 @end
