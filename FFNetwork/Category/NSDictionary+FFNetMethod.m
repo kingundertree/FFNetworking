@@ -47,6 +47,8 @@
         }
         if ([obj length] > 0) {
             [result addObject:[NSString stringWithFormat:@"%@=%@", key, obj]];
+        } else {
+            [result addObject:[NSString stringWithFormat:@"%@=%@", key, @""]];
         }
     }];
     NSArray *sortedResult = [result sortedArrayUsingSelector:@selector(compare:)];

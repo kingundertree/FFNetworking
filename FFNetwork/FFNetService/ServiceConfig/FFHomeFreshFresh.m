@@ -18,14 +18,11 @@
 
 - (NSString *)onlineApiBaseUrl
 {
-    NSDictionary *infoDictionary = [[NSBundle mainBundle] infoDictionary];
-    NSString *version = [infoDictionary objectForKey:@"CFBundleShortVersionString"];
-    NSString *versionStr = self.versionWithPathDic[version];
-    if (versionStr && versionStr.length > 0) {
-        return [NSString stringWithFormat:@"http://test1.freshfresh.com/mobile/%@/index/uri/",versionStr];
-    } else {
-        return [NSString stringWithFormat:@"http://www.freshfresh.com/mobile/%@/index/uri/",@"1.0"];
-    }
+//    NSDictionary *infoDictionary = [[NSBundle mainBundle] infoDictionary];
+//    NSString *version = [infoDictionary objectForKey:@"CFBundleShortVersionString"];
+//    NSString *versionStr = self.versionWithPathDic[version];
+    
+    return [NSString stringWithFormat:@"http://test1.freshfresh.com/"];
 }
 
 - (NSString *)onlineApiVersion
