@@ -69,7 +69,7 @@ static NSTimeInterval kAIFNetworkingTimeoutSeconds = 10.0f;
     
     NSString *fullUrl;
     if ([requestParams allKeys].count > 0) {
-        if ([service isKindOfClass:[FFHomeFreshFresh Class]]) {
+        if ([service isKindOfClass:[FFHomeFreshFresh class]]) {
             // v2版本 需要单独处理参数
             fullUrl = [NSString stringWithFormat:@"%@?%@",baseUrlStr,[requestParams FFNet_urlParamsStringSignature:NO]];
         } else {
@@ -103,12 +103,23 @@ static NSTimeInterval kAIFNetworkingTimeoutSeconds = 10.0f;
 //    [publicParams setObject:service.publicKey forKey:@"api_key"];
 //    [publicParams setObject:signature forKey:@"sig"];
     
-    NSMutableURLRequest *request = [self.httpRequestSerializer requestWithMethod:@"POST" URLString:baseUrlStr parameters:requestParams error:NULL];
+    NSDictionary *requestedParams = [[NSDictionary alloc] init];
+    
+    if ([requestParams allKeys].count > 0) {
+        if ([service isKindOfClass:[FFHomeFreshFresh class]]) {
+            // v2版本 需要单独处理参数
+            requestedParams = [requestParams FFNet_urlParamsDicSignature:NO];
+        } else {
+            requestedParams = requestParams;
+        }
+    }
+
+    NSMutableURLRequest *request = [self.httpRequestSerializer requestWithMethod:@"POST" URLString:baseUrlStr parameters:requestedParams error:NULL];
     if ([service isKindOfClass:[FFHomeFreshFresh class]]) {
         // v2版本 需要单独处理参数
-        request.requestParams = [requestParams FFNet_urlParamsDicSignature:NO];
+        request.requestParams = requestedParams;
     } else {
-        request.requestParams = requestParams;
+        request.requestParams = requestedParams;
     }
     for (NSString *key in publicParams) {
         NSString *headerStr = publicParams[key];
@@ -117,7 +128,7 @@ static NSTimeInterval kAIFNetworkingTimeoutSeconds = 10.0f;
         }
     }
     
-    [FFNetDebug logDebugInfoWithRequest:request apiName:methodName service:service requestParams:requestParams httpMethod:@"POST"];
+    [FFNetDebug logDebugInfoWithRequest:request apiName:methodName service:service requestParams:requestedParams httpMethod:@"POST"];
     return request;
 }
 

@@ -8,7 +8,6 @@
 
 #import "NSDictionary+FFNetMethod.h"
 #import "NSArray+FFNetMethod.h"
-#import "GTMBase64.h"
 #import "NSString+MD5Addition.h"
 #import "FFNetWorkingHeader.h"
 
@@ -66,7 +65,7 @@
 
 - (NSDictionary *)getCompontKeyDic:(NSArray *)sortedArray {
     NSString *initParams = [sortedArray FFNet_paramsString];
-    NSString *addKeyStr = [initParams stringByAppendingString:[NSString stringWithFormat:@"%@&key",FFFreshFreshKey]];
+    NSString *addKeyStr = [initParams stringByAppendingString:[NSString stringWithFormat:@"&key=%@",FFFreshFreshKey]];
     
     NSString *performSign = [NSString stringWithFormat:@"%@",[addKeyStr md5]];
     NSString *upperCaseSine = performSign.uppercaseString;
