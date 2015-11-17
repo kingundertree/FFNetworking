@@ -10,6 +10,7 @@
 #import "NSArray+FFNetMethod.h"
 #import "NSString+MD5Addition.h"
 #import "FFNetWorkingHeader.h"
+#import "NSString+FFNetMethod.h"
 
 @implementation NSDictionary (FFNetMethod)
 /** 字符串前面是没有问号的，如果用于POST，那就不用加问号，如果用于GET，就要加个问号 */
@@ -42,9 +43,9 @@
         if (![obj isKindOfClass:[NSString class]]) {
             obj = [NSString stringWithFormat:@"%@", obj];
         }
-        if (!isForSignature) {
-            obj = (NSString *)CFBridgingRelease(CFURLCreateStringByAddingPercentEscapes(NULL,  (CFStringRef)obj,  NULL,  (CFStringRef)@"!*'();:@&;=+$,/?%#[]",  kCFStringEncodingUTF8));
-        }
+//        if (!isForSignature) {
+//            obj = (NSString *)CFBridgingRelease(CFURLCreateStringByAddingPercentEscapes(NULL,  (CFStringRef)obj,  NULL,  (CFStringRef)@"!*'();:@&;=+$,/?%#[]",  kCFStringEncodingUTF8));
+//        }
         if ([obj length] > 0) {
             [result addObject:[NSString stringWithFormat:@"%@=%@", key, obj]];
         } else {
@@ -52,9 +53,9 @@
         }
     }];
     NSArray *sortedResult = [result sortedArrayUsingSelector:@selector(compare:)];
+    NSLog(@"sortedResult--->>%@",sortedResult);
     return sortedResult;
 }
-
 
 - (NSString *)getCompontKeyStr:(NSArray *)sortedArray {
     NSString *initParams = [sortedArray FFNet_paramsString];

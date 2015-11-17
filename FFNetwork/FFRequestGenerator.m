@@ -71,9 +71,9 @@ static NSTimeInterval kAIFNetworkingTimeoutSeconds = 10.0f;
     if ([requestParams allKeys].count > 0) {
         if ([service isKindOfClass:[FFHomeFreshFresh class]]) {
             // v2版本 需要单独处理参数
-            fullUrl = [NSString stringWithFormat:@"%@?%@",baseUrlStr,[requestParams FFNet_urlParamsStringSignature:NO]];
+            fullUrl = [NSString stringWithFormat:@"%@?%@",baseUrlStr,[requestParams FFNet_urlParamsStringSignature:YES]];
         } else {
-            fullUrl = [NSString stringWithFormat:@"%@?%@",baseUrlStr,[requestParams FFNet_urlParamsString:NO]];
+            fullUrl = [NSString stringWithFormat:@"%@?%@",baseUrlStr,[requestParams FFNet_urlParamsString:YES]];
         }
     } else {
         fullUrl = [NSString stringWithFormat:@"%@",baseUrlStr];
@@ -108,7 +108,7 @@ static NSTimeInterval kAIFNetworkingTimeoutSeconds = 10.0f;
     if ([requestParams allKeys].count > 0) {
         if ([service isKindOfClass:[FFHomeFreshFresh class]]) {
             // v2版本 需要单独处理参数
-            requestedParams = [requestParams FFNet_urlParamsDicSignature:NO];
+            requestedParams = [requestParams FFNet_urlParamsDicSignature:YES];
         } else {
             requestedParams = requestParams;
         }

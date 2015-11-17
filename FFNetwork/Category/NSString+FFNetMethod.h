@@ -16,4 +16,5 @@
 + (NSString *) jsonStringWithObject:(id) object;
 + (NSDictionary *)dictionaryWithJsonString:(NSString *)jsonString;
 + (NSString *) jsonStringWithString:(NSString *) string;
++ (NSString *)replaceUnicode:(NSString *)unicodeStr;
 @end
