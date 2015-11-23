@@ -38,7 +38,7 @@
 
 - (NSString *)offlineApiBaseUrl
 {
-    return @"http://192.168.10.234:9009/";
+    return @"http://test2.freshfresh.com/";
 }
 
 - (NSString *)offlineApiVersion
