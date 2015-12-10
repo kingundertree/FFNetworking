@@ -27,7 +27,7 @@ static NSString * const httpMethodRestfulPost = @"POST";
 static NSString * const httpMethodRestfulPut = @"PUT";
 static NSString * const httpMethodRestfulDelete = @"DELETE";
 
-static NSTimeInterval kAIFNetworkingTimeoutSeconds = 10.0f;
+static NSTimeInterval kAIFNetworkingTimeoutSeconds = 15.0f;
 
 @interface FFRequestGenerator ()
 @property(nonatomic, strong) AFHTTPRequestSerializer *httpRequestSerializer;
