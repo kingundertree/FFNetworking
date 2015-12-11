@@ -28,7 +28,8 @@
                                 @"qtime":context.qtime,
                                 @"uuid":context.uuid,
                                 @"i":context.i,
-                                @"v":context.v
+                                @"v":context.v,
+                                @"version":FFAppVersion
                                 };
     //@"cid":context.cid,
     return returnDic;
@@ -55,7 +56,8 @@
                                 @"app":context.app,
                                 @"ch":context.channelID,
                                 @"ct":context.ct,
-                                @"pmodel":context.pmodel
+                                @"pmodel":context.pmodel,
+                                @"version":FFAppVersion
                                 };
     
     return returnDic;
