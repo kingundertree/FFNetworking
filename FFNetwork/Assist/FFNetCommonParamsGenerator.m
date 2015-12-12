@@ -15,6 +15,8 @@
 {
     FFAppContext *context = [FFAppContext sharedInstance];
     
+    NSString *appVersion = [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"];
+
     NSDictionary *returnDic = @{@"ostype2":context.ostype2,
                                 @"udid2":context.udid2,
                                 @"uuid2":context.uuid2,
@@ -29,7 +31,7 @@
                                 @"uuid":context.uuid,
                                 @"i":context.i,
                                 @"v":context.v,
-                                @"version":FFAppVersion
+                                @"version":appVersion
                                 };
     //@"cid":context.cid,
     return returnDic;
@@ -38,6 +40,8 @@
 + (NSDictionary *)commonParamsDictionaryForLog
 {
     FFAppContext *context = [FFAppContext sharedInstance];
+    NSString *appVersion = [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"];
+
     NSDictionary *returnDic = @{
                                 @"guid":context.guid,
                                 @"dvid":context.dvid,
@@ -57,7 +61,7 @@
                                 @"ch":context.channelID,
                                 @"ct":context.ct,
                                 @"pmodel":context.pmodel,
-                                @"version":FFAppVersion
+                                @"version":appVersion
                                 };
     
     return returnDic;
