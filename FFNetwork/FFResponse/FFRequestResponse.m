@@ -46,7 +46,9 @@
         self.responseData = responseData;
         self.requestParams = request.requestParams;
         self.isCache = NO;
-        self.content = [self createContentWithData:self.responseData];
+    //    self.content = [self createContentWithData:self.responseData];
+        NSDictionary *requestDic = [self dictionaryWithJsonString:self.contentString];
+        self.content = requestDic;
     }
     return self;
 }
