@@ -23,14 +23,20 @@
 {
     self = [super init];
     if (self) {
-        self.contentString = [responseString FFNet_defaultValue:@""];
+        NSString *filterStr = [NSString replaceAllCurrentString:responseString];
+        NSString *filterElseStr = [filterStr FFNet_defaultValue:@""];
+        
+        self.contentString = filterElseStr;
         self.status = [self responseStatusWithRequestString:responseString];
         self.requestId = [requestId integerValue];
         self.request = request;
         self.responseData = responseData;
         self.requestParams = request.requestParams;
         self.isCache = NO;
-        self.content = [self createContentWithData:self.responseData];
+        NSDictionary *requestDic = [self dictionaryWithJsonString:filterElseStr];
+        self.content = requestDic;
+
+      //  self.content = [self createContentWithData:self.responseData];
     }
     return self;
 }
