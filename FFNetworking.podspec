@@ -61,7 +61,7 @@ Pod::Spec.new do |s|
   #  the deployment target. You can optionally include the target after the platform.  
   #  
   
-  s.description  = ""
+  s.description  = "这是一个便捷的网络请求库，便于丰富的请求参数统一"
   s.ios.deployment_target = '6.0'
   s.platform     = :ios, '6.0'
 
